@@ -1,0 +1,18 @@
+13:50:11 **** Incremental Build of configuration Debug for project OgreTutorial1 ****
+make all 
+Building file: ../src/TutorialApplication.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/nirmitp/workspace/OgreTutorial1/inc" -I/usr/local/include/OGRE -I/usr/local/include/OGRE/Overlay -I/usr/include/ois -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TutorialApplication.d" -MT"src/TutorialApplication.d" -o "src/TutorialApplication.o" "../src/TutorialApplication.cpp"
+Finished building: ../src/TutorialApplication.cpp
+ 
+Building target: OgreTutorial1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "OgreTutorial1"  ./src/BaseApplication.o ./src/TutorialApplication.o   -lOgreOverlay -lOIS -lboost_system -lOgreMain
+Finished building target: OgreTutorial1
+ 
+13:50:21 **** Incremental Build of configuration Debug for project OgreTutorial1 ****
+make all 
+make: Nothing to be done for 'all'.
+13:50:44 **** Incremental Build of configuration Debug for project OgreTutorial1 ****
+make all 
+make: Nothing to be done for 'all'.

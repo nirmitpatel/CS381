@@ -38,6 +38,7 @@ void TutorialApplication::createScene(void)
 
 	mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5, 0.5, 0.5));
 
+	// cube 1
 	Ogre::Entity* cubeEntity = mSceneMgr->createEntity("cube.mesh");
 	cubeEntity->setCastShadows(false);
 
@@ -45,6 +46,16 @@ void TutorialApplication::createScene(void)
 	cubeNode->setPosition(0, 0, 0);
 	cubeNode->attachObject(cubeEntity);
 
+	// cube 2
+	Ogre::Entity* cubeEntity2 = mSceneMgr->createEntity("cube.mesh");
+	cubeEntity->setCastShadows(false);
+
+	Ogre::SceneNode* cubeNode2 = mSceneMgr->getRootSceneNode()->createChildSceneNode("CubeNode2");
+	cubeNode2->setPosition(250, 0, 0);
+	cubeNode2->attachObject(cubeEntity2);
+
+
+	// create plane
 	Ogre::Plane plane(Ogre::Vector3::UNIT_Y, 0);
 
 	Ogre::MeshManager::getSingleton().createPlane(
@@ -75,9 +86,10 @@ void TutorialApplication::createScene(void)
 	groundEntity->setCastShadows(false);
 
 	groundEntity->setMaterialName("Examples/Rockwall");
+	cubeEntity->setMaterialName("Borg/borg");
 
 	cubeNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(
-	    "CamNode", Ogre::Vector3(0, 300, 500));
+	    "CamNode", Ogre::Vector3(0, 300, 1000));
 
 	mCamNode = cubeNode;
 	cubeNode->attachObject(mCamera);
@@ -99,8 +111,8 @@ bool TutorialApplication::frameRenderingQueued(const Ogre::FrameEvent& fe)
 bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent& fe)
 {
 	static bool keyDownLastFrame8, keyDownLastFrameSpace, keyDownLastFrame2, keyDownLastFrame4,
-				keyDownLastFrame6, keyDownLastFrame3, keyDownLastFrame9 = false;
-	bool keyPress8, keyPressSpace, keyPress2, keyPress4, keyPress6, keyPress3, keyPress9;
+				keyDownLastFrame6, keyDownLastFrame3, keyDownLastFrameTab, keyDownLastFrame9 = false;
+	bool keyPress8, keyPressSpace, keyPress2, keyPress4, keyPress6, keyPress3, keyPress9, keyPressTab;
 
 	// if num key 8 pressed, go forward in negative z direction
 	keyPress8 = mKeyboard->isKeyDown(OIS::KC_NUMPAD8);
@@ -158,11 +170,19 @@ bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent& fe)
 		}
 	keyDownLastFrame9 = keyPress9;
 
-	// translate the cube according to the time frame
-	mSceneMgr->getSceneNode("CubeNode")->translate(
-		  vector * fe.timeSinceLastFrame,
-		  Ogre::Node::TS_LOCAL);
-
+	keyPressTab = mKeyboard->isKeyDown(OIS::KC_TAB);
+	if (keyPressTab && !keyDownLastFrameTab) {
+		// translate the cube according to the time frame
+		mSceneMgr->getSceneNode("CubeNode2")->translate(
+			vector * fe.timeSinceLastFrame,
+			Ogre::Node::TS_LOCAL);
+	}
+	else {
+		// translate the cube according to the time frame
+		mSceneMgr->getSceneNode("CubeNode")->translate(
+			vector * fe.timeSinceLastFrame,
+			Ogre::Node::TS_LOCAL);
+	}
   // return true if the operation is successful
   return true;
 }

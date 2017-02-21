@@ -4,11 +4,27 @@ material Borg/borg
 	{
 		pass
 		{
-			ambient 0.1 0.1 0.1
+			ambient 2 2 2
 
 			texture_unit
 			{
 				texture borg.jpg
+			}
+		}
+	}
+}
+
+material Borg/wood
+{
+	technique
+	{
+		pass
+		{
+			ambient 2 2 2
+
+			texture_unit
+			{
+				texture wood.jpg
 			}
 		}
 	}

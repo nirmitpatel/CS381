@@ -85,8 +85,12 @@ void TutorialApplication::createScene(void)
 
 	groundEntity->setCastShadows(false);
 
+	// give rockwall texture to ground
 	groundEntity->setMaterialName("Examples/Rockwall");
+	// give borg texture to cube 1
 	cubeEntity->setMaterialName("Borg/borg");
+	// give wood texture to cube 2
+	cubeEntity2->setMaterialName("Borg/wood");
 
 	cubeNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(
 	    "CamNode", Ogre::Vector3(0, 300, 1000));
@@ -156,6 +160,7 @@ bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent& fe)
 
 	// if key pressed is num key 3, move in negative y direction
 	keyPress3 = mKeyboard->isKeyDown(OIS::KC_NUMPAD3);
+	//keyPress
 	if (keyPress3 && !keyDownLastFrame3)
 		{
 		vector = updateVelocity();
@@ -170,6 +175,7 @@ bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent& fe)
 		}
 	keyDownLastFrame9 = keyPress9;
 
+	// if tab key is pressed, only move the second cube
 	keyPressTab = mKeyboard->isKeyDown(OIS::KC_TAB);
 	if (keyPressTab && !keyDownLastFrameTab) {
 		// translate the cube according to the time frame
@@ -177,12 +183,14 @@ bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent& fe)
 			vector * fe.timeSinceLastFrame,
 			Ogre::Node::TS_LOCAL);
 	}
+	// else only move the first cube
 	else {
 		// translate the cube according to the time frame
 		mSceneMgr->getSceneNode("CubeNode")->translate(
 			vector * fe.timeSinceLastFrame,
 			Ogre::Node::TS_LOCAL);
 	}
+
   // return true if the operation is successful
   return true;
 }

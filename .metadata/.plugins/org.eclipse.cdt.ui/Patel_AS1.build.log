@@ -1,4 +1,4 @@
-14:22:54 **** Incremental Build of configuration Debug for project Patel_AS1 ****
+15:10:56 **** Incremental Build of configuration Debug for project Patel_AS1 ****
 make all 
 Building file: ../src/TutorialApplication.cpp
 Invoking: GCC C++ Compiler
@@ -22,5 +22,5 @@ g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "Patel_AS1"  ./src/BaseAppli
 Finished building target: Patel_AS1
  
 
-14:22:58 Build Finished (took 4s.84ms)
+15:11:00 Build Finished (took 4s.333ms)
 

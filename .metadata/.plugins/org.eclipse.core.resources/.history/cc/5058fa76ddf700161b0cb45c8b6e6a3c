@@ -1,0 +1,379 @@
+/*
+-----------------------------------------------------------------------------
+Filename:    TutorialApplication.cpp
+-----------------------------------------------------------------------------
+
+This source file is part of the
+   ___                 __    __ _ _    _
+  /___\__ _ _ __ ___  / / /\ \ (_) | _(_)
+ //  // _` | '__/ _ \ \ \/  \/ / | |/ / |
+/ \_// (_| | | |  __/  \  /\  /| |   <| |
+\___/ \__, |_|  \___|   \/  \/ |_|_|\_\_|
+      |___/
+Tutorial Framework (for Ogre 1.9)
+http://www.ogre3d.org/wiki/
+-----------------------------------------------------------------------------
+*/
+
+#include "TutorialApplication.h"
+
+//---------------------------------------------------------------------------
+TutorialApplication::TutorialApplication(void): mCamNode(0), mDirection(Ogre::Vector3::ZERO), mMove(250), velocity(0)
+{
+	vector = Ogre::Vector3::ZERO;
+}
+//---------------------------------------------------------------------------
+TutorialApplication::~TutorialApplication(void)
+{
+}
+
+//---------------------------------------------------------------------------
+void TutorialApplication::createScene(void)
+{
+    // local variables
+	int surfaceHeight = -10;
+
+	mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5, 0.5, 0.5));
+
+	Ogre::Entity* cubeEntity = mSceneMgr->createEntity("cube.mesh");
+	cubeEntity->setCastShadows(false);
+
+	Ogre::SceneNode* cubeNode = mSceneMgr->getRootSceneNode()->createChildSceneNode("CubeNode");
+	cubeNode->setPosition(0, 0, 0);
+	cubeNode->attachObject(cubeEntity);
+
+	Ogre::Plane plane(Ogre::Vector3::UNIT_Y, 0);
+
+	Ogre::MeshManager::getSingleton().createPlane(
+	  "ground",
+	  Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
+	  plane,
+	  10000, 10000, 20, 20,
+	  true,
+	  1, 5, 5,
+	  Ogre::Vector3::UNIT_Z);
+
+	Ogre::Entity* groundEntity = mSceneMgr->createEntity("ground");
+
+	Ogre::Light* spotLight = mSceneMgr->createLight("SpotLight");
+
+	spotLight->setDiffuseColour(0, 0, 1.0);
+	spotLight->setSpecularColour(0, 0, 1.0);
+
+	spotLight->setType(Ogre::Light::LT_SPOTLIGHT);
+
+	spotLight->setDirection(-1, -1, 0);
+	spotLight->setPosition(Ogre::Vector3(200, 200, 0));
+
+	Ogre::SceneNode* groundNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
+	groundNode->setPosition(0, surfaceHeight, 0);
+	groundNode->attachObject(groundEntity);
+
+	groundEntity->setCastShadows(false);
+
+	groundEntity->setMaterialName("Examples/Rockwall");
+
+	cubeNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(
+	    "CamNode", Ogre::Vector3(0, 300, 500));
+
+	mCamNode = cubeNode;
+	cubeNode->attachObject(mCamera);
+}
+
+/*void TutorialApplication::createCamera()
+{	Ogre::Entity* ninjaEntity = mSceneMgr->createEntity("ninja.mesh");
+	Ogre::SceneNode* ninjaNode = mSceneMgr->getRootSceneNode()->createChildSceneNode("NinjaNode");
+	ninjaNode->attachObject(ninjaEntity);
+	mCamera = mSceneMgr->createCamera("PlayerCam");
+
+	mCamera->setPosition(Ogre::Vector3(0, 300, 500));
+	mCamera->lookAt(Ogre::Vector3(0, 0, 0));
+
+	mCamera->setNearClipDistance(5);
+
+	mCameraMan = new OgreBites::SdkCameraMan(mCamera);
+
+}*/
+
+/*void TutorialApplication::createViewports()
+{
+	Ogre::Viewport* vp = mWindow->addViewport(mCamera);
+
+	vp->setBackgroundColour(Ogre::ColourVvectoralue(0, 0, 0));
+
+	mCamera->setAspectRatio(
+	  Ogre::Real(vp->getActualWidth()) /
+	  Ogre::Real(vp->getActualHeight()));
+}*/
+
+
+bool TutorialApplication::frameRenderingQueued(const Ogre::FrameEvent& fe)
+{
+  bool ret = BaseApplication::frameRenderingQueued(fe);
+
+  if(!processUnbufferedInput(fe))
+    return false;
+
+  mCamNode->translate(mDirection * fe.timeSinceLastFrame, Ogre::Node::TS_LOCAL);
+
+  return ret;
+}
+
+bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent& fe)
+{
+	static bool keyDownLastFrame, keyDownLastFrame2, keyDownLastFrame3, keyDownLastFrame4,
+				keyDownLastFrame5, keyDownLastFrame6, keyDownLastFrame7 = false;
+	bool keyPress, keyPress2, keyPress3, keyPress4, keyPress5, keyPress6, keyPress7;
+
+	keyPress = mKeyboard->isKeyDown(OIS::KC_NUMPAD8);
+
+	if (keyPress && !keyDownLastFrame)
+		{
+		vector = updateVelocity();
+		}
+
+	keyDownLastFrame = keyPress;
+
+
+
+	keyPress2 = mKeyboard->isKeyDown(OIS::KC_SPACE);
+
+	if (keyPress2 && !keyDownLastFrame2)
+		{
+		vector = Ogre::Vector3::ZERO;
+		}
+
+	keyDownLastFrame2 = keyPress2;
+
+
+
+
+
+
+	keyPress3 = mKeyboard->isKeyDown(OIS::KC_NUMPAD2);
+
+
+	if (keyPress3 && !keyDownLastFrame3)
+		{
+		vector = updateVelocity();
+		}
+
+	keyDownLastFrame3 = keyPress3;
+
+
+
+
+	keyPress4 = mKeyboard->isKeyDown(OIS::KC_NUMPAD4);
+
+	if (keyPress4 && !keyDownLastFrame4)
+		{
+		vector = updateVelocity();
+		}
+
+	keyDownLastFrame4 = keyPress4;
+
+
+
+
+
+	keyPress5 = mKeyboard->isKeyDown(OIS::KC_NUMPAD6);
+
+
+	if (keyPress5 && !keyDownLastFrame5)
+		{
+		vector = updateVelocity();
+		}
+
+	keyDownLastFrame5 = keyPress5;
+
+
+
+
+
+	keyPress6 = mKeyboard->isKeyDown(OIS::KC_NUMPAD3);
+
+
+	if (keyPress6 && !keyDownLastFrame6)
+		{
+		vector = updateVelocity();
+		}
+
+	keyDownLastFrame6 = keyPress6;
+
+
+
+
+
+	keyPress7 = mKeyboard->isKeyDown(OIS::KC_NUMPAD9);
+
+
+	if (keyPress7 && !keyDownLastFrame7)
+		{
+		vector = updateVelocity();
+		}
+
+	keyDownLastFrame7 = keyPress7;
+
+
+
+	mSceneMgr->getSceneNode("CubeNode")->translate(
+		  vector * fe.timeSinceLastFrame,
+		  Ogre::Node::TS_LOCAL);
+
+  return true;
+}
+
+Ogre::Vector3 TutorialApplication::updateVelocity()
+{
+	static Ogre::Real move = 50;
+
+	if (mKeyboard->isKeyDown(OIS::KC_NUMPAD8))
+		{
+			vector.z -= move;
+		}
+
+	if (mKeyboard->isKeyDown(OIS::KC_NUMPAD2))
+		{
+			vector.z += move;
+		}
+
+	if (mKeyboard->isKeyDown(OIS::KC_NUMPAD6))
+		{
+			vector.x += move;
+		}
+
+	if (mKeyboard->isKeyDown(OIS::KC_NUMPAD4))
+		{
+			vector.x -= move;
+		}
+
+	if (mKeyboard->isKeyDown(OIS::KC_NUMPAD9))
+		{
+			vector.y += move;
+		}
+
+	if (mKeyboard->isKeyDown(OIS::KC_NUMPAD3))
+		{
+			vector.y -= move;
+		}
+
+	return vector;
+}
+
+Ogre::Vector3 TutorialApplication::updatePosition()
+{
+	return vector = updateVelocity();
+}
+
+bool TutorialApplication::keyPressed(const OIS::KeyEvent& ke)
+{
+  switch (ke.key)
+  {
+  case OIS::KC_ESCAPE:
+    mShutDown = true;
+    break;
+
+  case OIS::KC_W:
+    mDirection.z = -mMove;
+    break;
+
+  case OIS::KC_S:
+    mDirection.z = mMove;
+    break;
+
+  case OIS::KC_A:
+    mDirection.x = -mMove;
+    break;
+
+  case OIS::KC_D:
+    mDirection.x = mMove;
+    break;
+
+  case OIS::KC_F:
+    mDirection.y = -mMove;
+    break;
+
+  case OIS::KC_E:
+    mDirection.y = mMove;
+    break;
+
+  default:
+    break;
+  }
+
+  return true;
+}
+
+bool TutorialApplication::keyReleased(const OIS::KeyEvent& ke)
+{
+  switch (ke.key)
+  {
+  case OIS::KC_W:
+    mDirection.z = 0;
+    break;
+
+  case OIS::KC_S:
+    mDirection.z = 0;
+    break;
+
+  case OIS::KC_A:
+    mDirection.x = 0;
+    break;
+
+  case OIS::KC_D:
+    mDirection.x = 0;
+    break;
+
+  case OIS::KC_F:
+    mDirection.y = 0;
+    break;
+
+  case OIS::KC_E:
+    mDirection.y = 0;
+    break;
+
+  default:
+    break;
+  }
+
+  return true;
+}
+//---------------------------------------------------------------------------
+
+#if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
+#define WIN32_LEAN_AND_MEAN
+#include "windows.h"
+#endif
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
+    INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE, LPSTR strCmdLine, INT)
+#else
+    int main(int argc, char *argv[])
+#endif
+    {
+        // Create application object
+        TutorialApplication app;
+
+        try {
+            app.go();
+        } catch(Ogre::Exception& e)  {
+#if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
+            MessageBox(NULL, e.getFullDescription().c_str(), "An exception has occurred!", MB_OK | MB_ICONERROR | MB_TASKMODAL);
+#else
+            std::cerr << "An exception has occurred: " <<
+                e.getFullDescription().c_str() << std::endl;
+#endif
+        }
+
+        return 0;
+    }
+
+#ifdef __cplusplus
+}
+#endif
+
+//---------------------------------------------------------------------------

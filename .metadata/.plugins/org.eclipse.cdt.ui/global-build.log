@@ -1,18 +1,42 @@
-13:50:11 **** Incremental Build of configuration Debug for project OgreTutorial1 ****
+13:35:37 **** Incremental Build of configuration Debug for project Patel_AS1 ****
 make all 
+Building file: ../src/BaseApplication.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/nirmitp/workspace/Patel_AS1/inc" -I/usr/local/include/OGRE -I/usr/local/include/OGRE/Overlay -I/usr/include/ois -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BaseApplication.d" -MT"src/BaseApplication.d" -o "src/BaseApplication.o" "../src/BaseApplication.cpp"
+In file included from ../src/BaseApplication.cpp:21:0:
+/home/nirmitp/workspace/Patel_AS1/inc/BaseApplication.h: In constructor ‘BaseApplication::BaseApplication()’:
+/home/nirmitp/workspace/Patel_AS1/inc/BaseApplication.h:127:33: warning: ‘BaseApplication::mKeyboard’ will be initialized after [-Wreorder]
+     OIS::Keyboard*              mKeyboard;
+                                 ^
+/home/nirmitp/workspace/Patel_AS1/inc/BaseApplication.h:114:33: warning:   ‘Ogre::OverlaySystem* BaseApplication::mOverlaySystem’ [-Wreorder]
+     Ogre::OverlaySystem*        mOverlaySystem;
+                                 ^
+../src/BaseApplication.cpp:28:1: warning:   when initialized here [-Wreorder]
+ BaseApplication::BaseApplication(void)
+ ^
+Finished building: ../src/BaseApplication.cpp
+ 
 Building file: ../src/TutorialApplication.cpp
 Invoking: GCC C++ Compiler
-g++ -I"/home/nirmitp/workspace/OgreTutorial1/inc" -I/usr/local/include/OGRE -I/usr/local/include/OGRE/Overlay -I/usr/include/ois -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TutorialApplication.d" -MT"src/TutorialApplication.d" -o "src/TutorialApplication.o" "../src/TutorialApplication.cpp"
+g++ -I"/home/nirmitp/workspace/Patel_AS1/inc" -I/usr/local/include/OGRE -I/usr/local/include/OGRE/Overlay -I/usr/include/ois -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TutorialApplication.d" -MT"src/TutorialApplication.d" -o "src/TutorialApplication.o" "../src/TutorialApplication.cpp"
+In file included from ../src/TutorialApplication.cpp:21:0:
+/home/nirmitp/workspace/Patel_AS1/inc/TutorialApplication.h: In constructor ‘TutorialApplication::TutorialApplication()’:
+/home/nirmitp/workspace/Patel_AS1/inc/TutorialApplication.h:47:16: warning: ‘TutorialApplication::mMove’ will be initialized after [-Wreorder]
+     Ogre::Real mMove;
+                ^
+/home/nirmitp/workspace/Patel_AS1/inc/TutorialApplication.h:39:9: warning:   ‘int TutorialApplication::velocity’ [-Wreorder]
+     int velocity;
+         ^
+../src/TutorialApplication.cpp:24:1: warning:   when initialized here [-Wreorder]
+ TutorialApplication::TutorialApplication(void): mCamNode(0), mDirection(Ogre::Vector3::ZERO), mMove(250), velocity(0)
+ ^
 Finished building: ../src/TutorialApplication.cpp
  
-Building target: OgreTutorial1
+Building target: Patel_AS1
 Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "OgreTutorial1"  ./src/BaseApplication.o ./src/TutorialApplication.o   -lOgreOverlay -lOIS -lboost_system -lOgreMain
-Finished building target: OgreTutorial1
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "Patel_AS1"  ./src/BaseApplication.o ./src/TutorialApplication.o   -lOgreOverlay -lOgreMain -lOIS -lboost_system
+Finished building target: Patel_AS1
  
-13:50:21 **** Incremental Build of configuration Debug for project OgreTutorial1 ****
-make all 
-make: Nothing to be done for 'all'.
-13:50:44 **** Incremental Build of configuration Debug for project OgreTutorial1 ****
+13:36:05 **** Incremental Build of configuration Debug for project Patel_AS1 ****
 make all 
 make: Nothing to be done for 'all'.

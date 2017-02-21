@@ -1,0 +1,50 @@
+#include "TutorialApplication.h"
+
+TutorialApplication::TutorialApplication()
+  : mTerrainGroup(0),
+    mTerrainGlobals(0),
+    mInfoLabel(0)
+{
+}
+
+TutorialApplication::~TutorialApplication()
+{
+}
+
+void TutorialApplication::createScene()
+{
+}
+
+void TutorialApplication::createFrameListener()
+{
+  BaseApplication::createFrameListener();
+}
+
+void TutorialApplication::destroyScene()
+{
+}
+
+bool TutorialApplication::frameRenderingQueued(const Ogre::FrameEvent& fe)
+{
+  bool ret = BaseApplication::frameRenderingQueued(fe);
+
+  return ret;
+}
+
+void getTerrainImage(bool flipX, bool flipY, Ogre::Image& img)
+{
+}
+
+void TutorialApplication::defineTerrain(long x, long y)
+{
+}
+
+void TutorialApplication::initBlendMaps(Ogre::Terrain* terrain)
+{
+}
+
+void TutorialApplication::configureTerrainDefaults(Ogre::Light* light)
+{
+}
+
+// MAIN FUNCTION OMITTED FOR SPACE

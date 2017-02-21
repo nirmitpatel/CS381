@@ -1,0 +1,6 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:OgreTutorial4,org.eclipse.launchbar.core.descriptorType.default\:OgreIntro,org.eclipse.launchbar.core.descriptorType.default\:OgreTutorial1,org.eclipse.launchbar.core.descriptorType.default\:OgreTutorial3,org.eclipse.launchbar.core.descriptorType.default\:OgreIntro (1),org.eclipse.launchbar.core.descriptorType.default\:Patel_AS1
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:OgreTutorial4/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:OgreTutorial4/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

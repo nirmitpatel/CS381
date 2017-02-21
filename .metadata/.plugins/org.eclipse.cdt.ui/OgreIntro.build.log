@@ -1,6 +1,6 @@
-12:55:23 **** Incremental Build of configuration Debug for project OgreIntro ****
+13:16:37 **** Incremental Build of configuration Debug for project OgreIntro ****
 make all 
 make: Nothing to be done for 'all'.
 
-12:55:23 Build Finished (took 312ms)
+13:16:37 Build Finished (took 70ms)
 

@@ -18,7 +18,7 @@ E/F: move in y direction
 
 
 Extra Credit Attempt: 
-1. Textures to both xubes
+1. Textures to both cubes
 2. Have multiple cubes controlled by numpad keys and TAB key
 
 

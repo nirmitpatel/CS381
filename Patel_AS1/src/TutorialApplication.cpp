@@ -114,9 +114,11 @@ bool TutorialApplication::frameRenderingQueued(const Ogre::FrameEvent& fe)
 
 bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent& fe)
 {
-	static bool keyDownLastFrame8, keyDownLastFrameSpace, keyDownLastFrame2, keyDownLastFrame4,
-				keyDownLastFrame6, keyDownLastFrame3, keyDownLastFrameTab, keyDownLastFrame9 = false;
-	bool keyPress8, keyPressSpace, keyPress2, keyPress4, keyPress6, keyPress3, keyPress9, keyPressTab;
+	static bool keyDownLastFramePGUP, keyDownLastFramePGDOWN, keyDownLastFrame8, keyDownLastFrameSpace,
+			keyDownLastFrame2, keyDownLastFrame4,keyDownLastFrame6, keyDownLastFrame3,
+				keyDownLastFrameTab, keyDownLastFrame9 = false;
+	bool keyPressPGUP, keyPressPGDOWN, keyPress8, keyPressSpace, keyPress2, keyPress4, keyPress6,
+			keyPress3, keyPress9, keyPressTab;
 
 	// if num key 8 pressed, go forward in negative z direction
 	keyPress8 = mKeyboard->isKeyDown(OIS::KC_NUMPAD8);
@@ -158,22 +160,26 @@ bool TutorialApplication::processUnbufferedInput(const Ogre::FrameEvent& fe)
 		}
 	keyDownLastFrame6 = keyPress6;
 
-	// if key pressed is num key 3, move in negative y direction
+	// if key pressed is num key 3 or PG DOWN, move in negative y direction
 	keyPress3 = mKeyboard->isKeyDown(OIS::KC_NUMPAD3);
+	keyPressPGDOWN = mKeyboard->isKeyDown(OIS::KC_PGDOWN);
 	//keyPress
-	if (keyPress3 && !keyDownLastFrame3)
+	if ((keyPress3 || keyPressPGDOWN) && (!keyDownLastFrame3 && !keyDownLastFramePGDOWN))
 		{
 		vector = updateVelocity();
 		}
 	keyDownLastFrame3 = keyPress3;
+	keyDownLastFramePGDOWN = keyPressPGDOWN;
 
-	// if key pressed is num key 9, move in positive y direction
+	// if key pressed is num key 9 or PG UP, move in positive y direction
 	keyPress9 = mKeyboard->isKeyDown(OIS::KC_NUMPAD9);
-	if (keyPress9 && !keyDownLastFrame9)
+	keyPressPGUP = mKeyboard->isKeyDown(OIS::KC_PGUP);
+	if ((keyPress9 || keyPressPGUP) && (!keyDownLastFrame9 && !keyDownLastFramePGUP))
 		{
 		vector = updateVelocity();
 		}
 	keyDownLastFrame9 = keyPress9;
+	keyDownLastFramePGUP = keyPressPGUP;
 
 	// if tab key is pressed, only move the second cube
 	keyPressTab = mKeyboard->isKeyDown(OIS::KC_TAB);
@@ -224,14 +230,14 @@ Ogre::Vector3 TutorialApplication::updateVelocity()
 			vector.x -= move;
 		}
 
-	// check for num key 9 and move it in positive y direction
-	if (mKeyboard->isKeyDown(OIS::KC_NUMPAD9))
+	// check for num key 9 or PG UP and move it in positive y direction
+	if (mKeyboard->isKeyDown(OIS::KC_NUMPAD9) || mKeyboard->isKeyDown(OIS::KC_PGUP))
 		{
 			vector.y += move;
 		}
 
-	// check for num key 3 and move it in negative y direction
-	if (mKeyboard->isKeyDown(OIS::KC_NUMPAD3))
+	// check for num key 3 or PG DOWN and move it in negative y direction
+	if (mKeyboard->isKeyDown(OIS::KC_NUMPAD3) || mKeyboard->isKeyDown(OIS::KC_PGDOWN))
 		{
 			vector.y -= move;
 		}

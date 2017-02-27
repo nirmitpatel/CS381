@@ -1,6 +1,6 @@
-15:27:25 **** Incremental Build of configuration Debug for project Patel_AS1 ****
+13:24:20 **** Incremental Build of configuration Debug for project Patel_AS1 ****
 make all 
 make: Nothing to be done for 'all'.
 
-15:27:25 Build Finished (took 123ms)
+13:24:20 Build Finished (took 115ms)
 

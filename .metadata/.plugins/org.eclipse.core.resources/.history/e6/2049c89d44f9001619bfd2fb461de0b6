@@ -1,0 +1,18 @@
+#include "TutorialApplication.h"
+
+#include <OgreException.h>
+
+TutorialApplication::TutorialApplication()
+{
+}
+
+TutorialApplication::~TutorialApplication()
+{
+}
+
+bool TutorialApplication::go()
+{
+    return true;
+}
+
+// MAIN FUNCTION OMITTED

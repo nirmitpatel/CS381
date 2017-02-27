@@ -1,0 +1,8 @@
+class TutorialApplication
+{
+public:
+    TutorialApplication();
+    virtual ~TutorialApplication();
+
+    bool go();
+};

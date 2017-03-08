@@ -2,7 +2,7 @@
  * BaseApplication.cpp
  *
  *  Created on: Mar 1, 2017
- *      Author: mcbaker
+ *      Author: Nirmit Patel
  */
 
 

@@ -2,7 +2,7 @@
  * EntityMgr.h
  *
  *  Created on: Mar 5, 2017
- *      Author: mcbaker
+ *      Author: Nirmit Patel
  */
 
 #ifndef INC_ENTITYMGR_H_

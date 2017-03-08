@@ -3,7 +3,7 @@
 
  *
  *  Created on: Mar 1, 2017
- *      Author: mcbaker
+ *      Author: Nirmit Patel
  */
 
 #ifndef INC_AS2_H_

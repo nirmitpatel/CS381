@@ -32,7 +32,7 @@ void TutorialApplication::SetupCamera()
 
 	// A node to attach the camera to so we can move the camera node instead of the camera.
 	  cameraNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
-	  cameraNode->setPosition(0, 200, 500);
+	  cameraNode->setPosition(300, 200, 900);
 	  cameraNode->attachObject(mCamera);
 }
 
@@ -48,10 +48,10 @@ void TutorialApplication::createScene(void)
   EntityManager = new EntityMgr(mSceneMgr);
 
   EntityManager->CreateEntity(EntityType::Destroyer, Ogre::Vector3(0, 0, 0), 0.0f);
-  EntityManager->CreateEntity(EntityType::Frigate, Ogre::Vector3(200, 0, 0), 0.0f);
-  EntityManager->CreateEntity(EntityType::Carrier, Ogre::Vector3(400, 0, 0), 0.0f);
-  EntityManager->CreateEntity(EntityType::Alien, Ogre::Vector3(600, 0, 0), 0.0f);
-  EntityManager->CreateEntity(EntityType::SpeedBoat, Ogre::Vector3(800, 0, 0), 0.0f);
+  EntityManager->CreateEntity(EntityType::Frigate, Ogre::Vector3(200, 0, 200), 0.0f);
+  EntityManager->CreateEntity(EntityType::Carrier, Ogre::Vector3(400, 0, -200), 0.0f);
+  EntityManager->CreateEntity(EntityType::Alien, Ogre::Vector3(400, 0, 0), 0.0f);
+  EntityManager->CreateEntity(EntityType::SpeedBoat, Ogre::Vector3(400, 0, 200), 0.0f);
 
   EntityManager->SelectedEntityIndex = 0;
   EntityManager->SelectedEntity = EntityManager->entities[0];

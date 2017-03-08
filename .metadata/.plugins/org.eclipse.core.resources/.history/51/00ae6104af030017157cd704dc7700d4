@@ -1,0 +1,34 @@
+/*
+ * Aspect.cpp
+ *
+ *  Created on: Mar 6, 2017
+ *      Author: mcbaker
+ */
+
+
+	Aspect();
+	Aspect(Entity381* ent);
+	virtual ~Aspect();
+
+	virtual void Tick(float dt);
+	Entity381* entity;
+};
+
+class PhysicsAspect : public Aspect
+{
+public:
+	PhysicsAspect();
+	PhysicsAspect(Entity381* ent);
+	virtual ~PhysicsAspect();
+
+	virtual void Tick(float dt);
+
+};
+
+class RenderAspect: public Aspect
+{
+public:
+	RenderAspect();
+	RenderAspect(Entity381* ent);
+	virtual ~RenderAspect
+

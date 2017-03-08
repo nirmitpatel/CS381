@@ -1,0 +1,19 @@
+23:00:58 **** Incremental Build of configuration Debug for project Project2 ****
+make all 
+Building file: ../src/As2.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/nirmitp/workspace/Project2/inc" -I/usr/local/include/OGRE -I/usr/local/include/OGRE/Overlay -I/usr/include/ois -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/As2.d" -MT"src/As2.d" -o "src/As2.o" "../src/As2.cpp"
+In file included from ../src/As2.cpp:10:0:
+/home/nirmitp/workspace/Project2/inc/As2.h:45:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   int selected = 0;
+                  ^
+Finished building: ../src/As2.cpp
+ 
+Building target: Project2
+Invoking: GCC C++ Linker
+g++ -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o "Project2"  ./src/As2.o ./src/BaseApplication.o ./src/Entity381.o ./src/EntityMgr.o   -lOgreMain -lboost_system -lOgreOverlay -lOIS
+Finished building target: Project2
+ 
+
+23:01:02 Build Finished (took 3s.970ms)
+

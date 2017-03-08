@@ -1,0 +1,22 @@
+/*
+ * EntityMgr.h
+ *
+ *  Created on: Mar 6, 2017
+ *      Author: Nirmit Patel
+ */
+
+#ifndef INC_ENTITYMGR_H_
+#define INC_ENTITYMGR_H_
+
+class EntityMgr : public BaseApplication {
+	public:
+		EntityMgr();
+		~EntityMgr();
+		Ogre::Entity array[5];
+		Ogre::Entity selected;
+		void Tick(float dt);
+};
+
+
+
+#endif /* INC_ENTITYMGR_H_ */

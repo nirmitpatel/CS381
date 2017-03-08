@@ -1,0 +1,27 @@
+/*
+ * Entity381.h
+ *
+ *  Created on: Mar 6, 2017
+ *      Author: nirmitp
+ */
+
+#ifndef INC_ENTITY381_H_
+#define INC_ENTITY381_H_
+
+class EntityMgr : public BaseApplication {
+	public:
+		EntityMgr();
+		~EntityMgr();
+		float speed, heading, desiredSpeed, desiredHeading;
+		string meshFileName;
+		bool isSelected;
+		Ogre::Vector3 velocity, position;
+		static float acceleration, turnRate, maxSpeed, minSpeed;
+		static int entityId;
+		static enum entityType;
+
+};
+
+
+
+#endif /* INC_ENTITY381_H_ */

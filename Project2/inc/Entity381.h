@@ -1,0 +1,105 @@
+/*
+ * Entity381.h
+ *
+ *  Created on: Mar 1, 2017
+ *      Author: mcbaker
+ */
+
+#ifndef INC_ENTITY381_H_
+#define INC_ENTITY381_H_
+
+#include "BaseApplication.h"
+//#include "Aspect.h"
+#include <vector>
+
+using namespace std;
+
+class Aspect;
+class Entity381{
+public:
+	int entityID;
+	Ogre::String entityName;
+	double minSpeed, maxSpeed, speed, heading, desiredSpeed, desiredHeading;
+	double acceleration, turningRate;
+	Ogre::Vector3 acc, spe, des;
+	Ogre::String meshFileName;
+	Ogre::Vector3 position;
+	Ogre::Vector3 velocity;
+	std::vector<Aspect*> aspectList;
+	Ogre::SceneNode *ogreSceneNode;
+	Ogre::Entity *ogreEntity;
+
+	bool isSelected;
+	void Tick(float dt);
+	Entity381(void);
+	int isTurning;
+};
+
+
+class Destroyer: public Entity381 {
+public:
+	Destroyer(void);
+};
+
+class Carrier: public Entity381 {
+public:
+	Carrier(void);
+};
+
+class Speedboat: public Entity381 {
+public:
+	Speedboat(void);
+};
+
+class Frigate: public Entity381 {
+public:
+	Frigate(void);
+};
+
+class Alien: public Entity381 {
+public:
+	Alien(void);
+};
+
+
+
+
+class Aspect{
+public:
+	Aspect();
+	Aspect(Entity381* ent);
+	virtual ~Aspect();
+
+	virtual void Tick(float dt);
+	Entity381* entity;
+};
+
+class PhysicsAspect : public Aspect
+{
+public:
+	PhysicsAspect();
+	PhysicsAspect(Entity381* ent);
+	virtual ~PhysicsAspect();
+
+	void Tick(float dt);
+
+};
+
+class RenderAspect: public Aspect
+{
+public:
+	RenderAspect();
+	RenderAspect(Entity381* ent);
+	virtual ~RenderAspect();
+
+	void Tick(float dt);
+
+};
+
+
+
+
+
+
+
+#endif /* INC_ENTITY381_H_ */

@@ -1,0 +1,17 @@
+/*
+ * EntityMgr.h
+ *
+ *  Created on: Mar 6, 2017
+ *      Author: Nirmit Patel
+ */
+
+#ifndef INC_ENTITYMGR_H_
+#define INC_ENTITYMGR_H_
+
+class EntityMgr : public BaseApplication {
+
+};
+
+
+
+#endif /* INC_ENTITYMGR_H_ */

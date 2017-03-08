@@ -1,0 +1,55 @@
+/*
+ * Entity381.h
+ *
+ *  Created on: Mar 6, 2017
+ *      Author: nirmitp
+ */
+
+#include "Aspects.h"
+
+#ifndef INC_ENTITY381_H_
+#define INC_ENTITY381_H_
+
+class Entity381 : public BaseApplication {
+	public:
+		Entity381();
+		~Entity381();
+		float speed, heading, desiredSpeed, desiredHeading;
+		string meshFileName;
+		bool isSelected;
+		Ogre::Vector3 velocity, position;
+		static float acceleration, turnRate, maxSpeed, minSpeed;
+		static int entityId;
+		static enum entityType;
+		Ogre::SceneNode* shipSceneNode;
+		Ogre::Entity* ent;
+		void Tick (float dt);
+		Aspects asp;
+};
+
+class Destroyer : Entity381 {
+	Destroyer();
+	virtual ~Destroyer();
+};
+
+class Carrier : Entity381 {
+	Carrier();
+	virtual ~Carrier();
+};
+
+class Speedboat : Entity381 {
+	Speedboat();
+	virtual ~Speedboat();
+};
+
+class Destroyer : Entity381 {
+	Destroyer();
+	virtual ~Destroyer();
+};
+
+class Destroyer : Entity381 {
+	Destroyer();
+	virtual ~Destroyer();
+};
+
+#endif /* INC_ENTITY381_H_ */

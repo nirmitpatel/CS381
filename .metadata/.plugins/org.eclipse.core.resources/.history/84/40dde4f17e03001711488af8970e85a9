@@ -1,0 +1,8 @@
+
+#include "BaseApplication.h"
+#include "Entity381.h"
+
+class Aspect{
+public:
+	//Aspect();
+};

@@ -1,0 +1,60 @@
+/*
+* Aspect.cpp
+*
+*  Created on: Mar 6, 2017
+*      Author: mcbaker
+*/
+
+
+Aspect::Aspect()
+{
+
+}
+Aspect::Aspect(Entity381* ent)
+{
+	entity = ent;
+}
+Aspect::~Aspect()
+{
+
+}
+
+void Aspect::Tick(float dt)
+{
+
+}
+
+
+PhysicsAspect::PhysicsAspect()
+{
+
+}
+PhysicsAspect::PhysicsAspect(Entity381* ent)
+{
+
+}
+PhysicsAspect::~PhysicsAspect()
+{
+}
+
+void PhysicsAspect::Tick(float dt)
+{
+
+}
+
+
+RenderAspect::RenderAspect()
+{
+
+}
+
+RenderAspect::RenderAspect(Entity381* ent)
+{
+
+}
+
+RenderAspect::~RenderAspect()
+{
+
+}
+

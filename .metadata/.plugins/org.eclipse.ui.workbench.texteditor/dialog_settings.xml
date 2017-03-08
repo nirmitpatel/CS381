@@ -2,12 +2,16 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="surface" key="selection"/>
+		<item value="setPosi" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Setposi"/>
+			<item value="Set"/>
+			<item value="tab"/>
+			<item value="copypo"/>
 			<item value="surface"/>
 		</list>
 		<list key="replacehistory">
@@ -17,7 +21,7 @@
 		<item value="300" key="DIALOG_WIDTH"/>
 		<item value="1|Noto Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="415" key="DIALOG_HEIGHT"/>
-		<item value="693" key="DIALOG_X_ORIGIN"/>
-		<item value="238" key="DIALOG_Y_ORIGIN"/>
+		<item value="1113" key="DIALOG_X_ORIGIN"/>
+		<item value="317" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

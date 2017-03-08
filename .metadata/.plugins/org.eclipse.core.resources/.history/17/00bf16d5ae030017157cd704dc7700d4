@@ -1,0 +1,36 @@
+
+#include "BaseApplication.h"
+#include "Entity381.h"
+
+
+class Aspect{
+public:
+	Aspect();
+	Aspect(Entity381* ent);
+	virtual ~Aspect();
+
+	virtual void Tick(float dt);
+	Entity381* entity;
+};
+
+class PhysicsAspec
+{
+public:
+	Aspect();
+	Aspect(Entity381* ent);
+	virtual ~Aspect();
+
+	virtual void Tick(float dt);
+	Entity381* entity;
+};
+
+class RenderAspect
+{
+public:
+	Aspect();
+	Aspect(Entity381* ent);
+	virtual ~Aspect();
+
+	virtual void Tick(float dt);
+	Entity381* entity;
+};

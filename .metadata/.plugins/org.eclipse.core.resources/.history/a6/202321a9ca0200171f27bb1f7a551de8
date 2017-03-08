@@ -1,0 +1,19 @@
+/*
+ * Aspect.h
+ *
+ *  Created on: Mar 6, 2017
+ *      Author: nirmitp
+ */
+
+#include "Entity381.h"
+
+#ifndef INC_ASPECT_H_
+#define INC_ASPECT_H_
+
+class Aspect : public BaseApplication {
+
+};
+
+
+
+#endif /* INC_ASPECT_H_ */

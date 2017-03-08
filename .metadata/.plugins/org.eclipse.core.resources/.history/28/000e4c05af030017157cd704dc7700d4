@@ -1,0 +1,28 @@
+/*
+* Aspect.cpp
+*
+*  Created on: Mar 6, 2017
+*      Author: mcbaker
+*/
+
+
+AAspect::spect()
+Aspect(Entity381* ent)
+virtual ~Aspect()
+
+virtual void Tick(float dt)
+Entity381* entity
+
+
+
+PhysicsAspect()
+PhysicsAspect(Entity381* ent)
+virtual ~PhysicsAspect()
+
+virtual void Tick(float dt)
+
+
+RenderAspect();
+RenderAspect(Entity381* ent);
+virtual ~RenderAspect
+

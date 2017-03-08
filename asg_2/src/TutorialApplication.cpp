@@ -100,11 +100,7 @@ void TutorialApplication::MakeGround(){
 	  Ogre::Entity* groundEntity = mSceneMgr->createEntity("ground");
 	  mSceneMgr->getRootSceneNode()->createChildSceneNode()->attachObject(groundEntity);
 	  groundEntity->setCastShadows(false);
-	  //	  groundEntity->setMaterialName("Ocean2_HLSL_GLSL");
 	  groundEntity->setMaterialName("OceanHLSL_GLSL");
-	  //groundEntity->setMaterialName("Ocean2_Cg");
-	  //groundEntity->setMaterialName("NavyCg");
-
 }
 
 void TutorialApplication::MakeSky()

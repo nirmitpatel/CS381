@@ -149,7 +149,7 @@ void Physics::tick(float dt)
 	{
 		EntityInfo->isTurning = 0;
 	}
-	std::cerr << "ENTIY TICK END";
+	//std::cerr << "ENTIY TICK END";
 }
 
 Renderable::Renderable(Entity381* ptr) : Aspect(ptr)

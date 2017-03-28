@@ -1,8 +1,12 @@
 Src/engine.d: ../Src/engine.cpp \
  /home/jwoo/workspace/Assignment\ 3/Inc/engine.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/GfxMgr.h \
+ /home/jwoo/workspace/Assignment\ 3/Inc/inputMgr.h \
  /home/jwoo/workspace/Assignment\ 3/Inc/mgr.h \
- /usr/local/include/OGRE/OgreRoot.h \
+ /usr/include/OIS/OISEvents.h /usr/include/OIS/OISPrereqs.h \
+ /usr/include/OIS/OISConfig.h /usr/include/OIS/OISInputManager.h \
+ /usr/include/OIS/OISKeyboard.h /usr/include/OIS/OISObject.h \
+ /usr/include/OIS/OISInterface.h /usr/include/OIS/OISEvents.h \
+ /usr/include/OIS/OISMouse.h /usr/local/include/OGRE/OgreEntity.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
  /usr/local/include/OGRE/OgreConfig.h \
@@ -14,18 +18,21 @@ Src/engine.d: ../Src/engine.cpp \
  /usr/local/include/OGRE/OgreHeaderSuffix.h \
  /usr/local/include/OGRE/OgreMemorySTLAllocator.h \
  /usr/local/include/OGRE/OgreMemoryNedPooling.h \
- /usr/local/include/OGRE/OgreSingleton.h \
+ /usr/local/include/OGRE/OgreCommon.h \
  /usr/local/include/OGRE/OgreString.h \
- /usr/local/include/OGRE/OgreSceneManagerEnumerator.h \
- /usr/local/include/OGRE/OgreSceneManager.h \
- /usr/local/include/OGRE/OgreSceneNode.h \
- /usr/local/include/OGRE/OgreNode.h /usr/local/include/OGRE/OgreCommon.h \
- /usr/local/include/OGRE/OgreMatrix3.h \
+ /usr/local/include/OGRE/OgreMovableObject.h \
+ /usr/local/include/OGRE/OgreRenderQueue.h \
+ /usr/local/include/OGRE/OgreIteratorWrappers.h \
+ /usr/local/include/OGRE/OgreIteratorWrapper.h \
+ /usr/local/include/OGRE/OgreIteratorRange.h \
+ /usr/local/include/OGRE/OgreAxisAlignedBox.h \
  /usr/local/include/OGRE/OgreVector3.h /usr/local/include/OGRE/OgreMath.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
  /usr/local/include/OGRE/OgreMatrix4.h \
+ /usr/local/include/OGRE/OgreMatrix3.h \
  /usr/local/include/OGRE/OgreVector4.h \
- /usr/local/include/OGRE/OgrePlane.h \
+ /usr/local/include/OGRE/OgrePlane.h /usr/local/include/OGRE/OgreSphere.h \
+ /usr/local/include/OGRE/OgreShadowCaster.h \
  /usr/local/include/OGRE/OgreRenderable.h \
  /usr/local/include/OGRE/OgreRenderOperation.h \
  /usr/local/include/OGRE/OgreVertexIndexData.h \
@@ -44,9 +51,6 @@ Src/engine.d: ../Src/engine.cpp \
  /usr/local/include/OGRE/Threading/OgreThreadHeadersBoost.h \
  /usr/local/include/OGRE/Threading/OgreThreadDefines.h \
  /usr/local/include/OGRE/Threading/OgreThreadDefinesBoost.h \
- /usr/local/include/OGRE/OgreIteratorWrappers.h \
- /usr/local/include/OGRE/OgreIteratorWrapper.h \
- /usr/local/include/OGRE/OgreIteratorRange.h \
  /usr/local/include/OGRE/OgreBlendMode.h \
  /usr/local/include/OGRE/OgreGpuProgram.h \
  /usr/local/include/OGRE/OgreSerializer.h \
@@ -54,14 +58,19 @@ Src/engine.d: ../Src/engine.cpp \
  /usr/local/include/OGRE/OgreGpuProgramParams.h \
  /usr/local/include/OGRE/OgreAny.h \
  /usr/local/include/OGRE/OgreUserObjectBindings.h \
- /usr/local/include/OGRE/OgreMesh.h \
- /usr/local/include/OGRE/OgreAxisAlignedBox.h \
- /usr/local/include/OGRE/OgreVertexBoneAssignment.h \
- /usr/local/include/OGRE/OgreSkeleton.h \
- /usr/local/include/OGRE/OgreStringVector.h \
- /usr/local/include/OGRE/OgreAnimation.h \
+ /usr/local/include/OGRE/OgreFactoryObj.h \
  /usr/local/include/OGRE/OgreAnimable.h \
  /usr/local/include/OGRE/OgreVector2.h \
+ /usr/local/include/OGRE/OgreStringVector.h \
+ /usr/local/include/OGRE/OgreHardwareBufferManager.h \
+ /usr/local/include/OGRE/OgreSingleton.h \
+ /usr/local/include/OGRE/OgreHardwareCounterBuffer.h \
+ /usr/local/include/OGRE/OgreHardwareUniformBuffer.h \
+ /usr/local/include/OGRE/OgreRenderToVertexBuffer.h \
+ /usr/local/include/OGRE/OgreMesh.h \
+ /usr/local/include/OGRE/OgreVertexBoneAssignment.h \
+ /usr/local/include/OGRE/OgreSkeleton.h \
+ /usr/local/include/OGRE/OgreAnimation.h \
  /usr/local/include/OGRE/OgreAnimationTrack.h \
  /usr/local/include/OGRE/OgreSimpleSpline.h \
  /usr/local/include/OGRE/OgreRotationalSpline.h \
@@ -69,17 +78,21 @@ Src/engine.d: ../Src/engine.cpp \
  /usr/local/include/OGRE/OgrePose.h \
  /usr/local/include/OGRE/OgreAnimationState.h \
  /usr/local/include/OGRE/OgreController.h \
- /usr/local/include/OGRE/OgreSceneQuery.h \
- /usr/local/include/OGRE/OgreSphere.h /usr/local/include/OGRE/OgreRay.h \
+ /usr/local/include/OGRE/OgreResourceGroupManager.h \
+ /usr/local/include/OGRE/OgreArchive.h \
+ /usr/local/include/OGRE/OgreCamera.h \
+ /usr/local/include/OGRE/OgreFrustum.h \
+ /usr/local/include/OGRE/OgreMovablePlane.h \
+ /usr/local/include/OGRE/OgreRay.h \
  /usr/local/include/OGRE/OgrePlaneBoundedVolume.h \
+ /usr/local/include/OGRE/OgreViewport.h \
+ /usr/local/include/OGRE/OgreSceneManager.h \
+ /usr/local/include/OGRE/OgreSceneNode.h \
+ /usr/local/include/OGRE/OgreNode.h \
+ /usr/local/include/OGRE/OgreSceneQuery.h \
  /usr/local/include/OGRE/OgreAutoParamDataSource.h \
  /usr/local/include/OGRE/OgreLight.h \
- /usr/local/include/OGRE/OgreMovableObject.h \
- /usr/local/include/OGRE/OgreRenderQueue.h \
- /usr/local/include/OGRE/OgreShadowCaster.h \
- /usr/local/include/OGRE/OgreFactoryObj.h \
  /usr/local/include/OGRE/OgreShadowCameraSetup.h \
- /usr/local/include/OGRE/OgreMovablePlane.h \
  /usr/local/include/OGRE/OgreRenderQueueSortingGrouping.h \
  /usr/local/include/OGRE/OgreTechnique.h \
  /usr/local/include/OGRE/OgrePass.h \
@@ -94,11 +107,8 @@ Src/engine.d: ../Src/engine.cpp \
  /usr/local/include/OGRE/OgreRadixSort.h \
  /usr/local/include/OGRE/OgreRectangle2D.h \
  /usr/local/include/OGRE/OgreSimpleRenderable.h \
- /usr/local/include/OGRE/OgreResourceGroupManager.h \
- /usr/local/include/OGRE/OgreArchive.h \
  /usr/local/include/OGRE/OgreShadowTextureManager.h \
  /usr/local/include/OGRE/OgreCamera.h \
- /usr/local/include/OGRE/OgreFrustum.h \
  /usr/local/include/OGRE/OgreInstancedGeometry.h \
  /usr/local/include/OGRE/OgreSkeletonInstance.h \
  /usr/local/include/OGRE/OgreBone.h \
@@ -119,31 +129,18 @@ Src/engine.d: ../Src/engine.cpp \
  /usr/local/include/OGRE/OgreFrameListener.h \
  /usr/local/include/OGRE/OgreConfigOptionMap.h \
  /usr/local/include/OGRE/OgreNameGenerator.h \
- /usr/local/include/OGRE/OgreLodStrategyManager.h \
- /usr/local/include/OGRE/OgreLodStrategy.h \
- /usr/local/include/OGRE/OgreWorkQueue.h /usr/include/OIS/OISEvents.h \
- /usr/include/OIS/OISPrereqs.h /usr/include/OIS/OISConfig.h \
- /usr/include/OIS/OISInputManager.h /usr/include/OIS/OISKeyboard.h \
- /usr/include/OIS/OISObject.h /usr/include/OIS/OISInterface.h \
- /usr/include/OIS/OISEvents.h /usr/include/OIS/OISMouse.h \
- /usr/local/include/OGRE/OgreEntity.h \
- /usr/local/include/OGRE/OgreHardwareBufferManager.h \
- /usr/local/include/OGRE/OgreHardwareCounterBuffer.h \
- /usr/local/include/OGRE/OgreHardwareUniformBuffer.h \
- /usr/local/include/OGRE/OgreRenderToVertexBuffer.h \
- /usr/local/include/OGRE/OgreCamera.h \
- /usr/local/include/OGRE/OgreViewport.h \
- /usr/local/include/OGRE/OgreSceneManager.h \
  /usr/local/include/OGRE/OgreRenderWindow.h \
  /usr/local/include/OGRE/OgreConfigFile.h \
  /usr/local/include/OGRE/OgreException.h \
- /usr/local/include/OGRE/OgreMeshManager.h \
- /usr/local/include/OGRE/OgrePatchMesh.h \
- /usr/local/include/OGRE/OgrePatchSurface.h \
  /usr/local/include/OGRE/OgreWindowEventUtilities.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/inputMgr.h \
  /home/jwoo/workspace/Assignment\ 3/Inc/BaseApplication.h \
  /usr/local/include/OGRE/OgreLogManager.h \
+ /usr/local/include/OGRE/OgreRoot.h \
+ /usr/local/include/OGRE/OgreSceneManagerEnumerator.h \
+ /usr/local/include/OGRE/OgreSceneManager.h \
+ /usr/local/include/OGRE/OgreLodStrategyManager.h \
+ /usr/local/include/OGRE/OgreLodStrategy.h \
+ /usr/local/include/OGRE/OgreWorkQueue.h \
  /usr/local/include/OGRE/SdkTrays.h /usr/local/include/OGRE/Ogre.h \
  /usr/local/include/OGRE/OgreArchiveManager.h \
  /usr/local/include/OGRE/OgreBillboardChain.h \
@@ -161,6 +158,8 @@ Src/engine.d: ../Src/engine.cpp \
  /usr/local/include/OGRE/OgreInstancedEntity.h \
  /usr/local/include/OGRE/OgreManualObject.h \
  /usr/local/include/OGRE/OgreMeshManager.h \
+ /usr/local/include/OGRE/OgrePatchMesh.h \
+ /usr/local/include/OGRE/OgrePatchSurface.h \
  /usr/local/include/OGRE/OgreMeshSerializer.h \
  /usr/local/include/OGRE/OgreMeshSerializerImpl.h \
  /usr/local/include/OGRE/OgreEdgeListBuilder.h \
@@ -244,15 +243,35 @@ Src/engine.d: ../Src/engine.cpp \
  /home/jwoo/workspace/Assignment\ 3/Inc/Entity381.h \
  /home/jwoo/workspace/Assignment\ 3/Inc/Types.h \
  /home/jwoo/workspace/Assignment\ 3/Inc/gameMgr.h \
+ /home/jwoo/workspace/Assignment\ 3/Inc/GfxMgr.h \
+ /usr/local/include/OGRE/OgreMeshManager.h \
  /usr/local/include/OGRE/OgreTimer.h
 
 /home/jwoo/workspace/Assignment\ 3/Inc/engine.h:
 
-/home/jwoo/workspace/Assignment\ 3/Inc/GfxMgr.h:
+/home/jwoo/workspace/Assignment\ 3/Inc/inputMgr.h:
 
 /home/jwoo/workspace/Assignment\ 3/Inc/mgr.h:
 
-/usr/local/include/OGRE/OgreRoot.h:
+/usr/include/OIS/OISEvents.h:
+
+/usr/include/OIS/OISPrereqs.h:
+
+/usr/include/OIS/OISConfig.h:
+
+/usr/include/OIS/OISInputManager.h:
+
+/usr/include/OIS/OISKeyboard.h:
+
+/usr/include/OIS/OISObject.h:
+
+/usr/include/OIS/OISInterface.h:
+
+/usr/include/OIS/OISEvents.h:
+
+/usr/include/OIS/OISMouse.h:
+
+/usr/local/include/OGRE/OgreEntity.h:
 
 /usr/local/include/OGRE/OgrePrerequisites.h:
 
@@ -276,21 +295,21 @@ Src/engine.d: ../Src/engine.cpp \
 
 /usr/local/include/OGRE/OgreMemoryNedPooling.h:
 
-/usr/local/include/OGRE/OgreSingleton.h:
+/usr/local/include/OGRE/OgreCommon.h:
 
 /usr/local/include/OGRE/OgreString.h:
 
-/usr/local/include/OGRE/OgreSceneManagerEnumerator.h:
+/usr/local/include/OGRE/OgreMovableObject.h:
 
-/usr/local/include/OGRE/OgreSceneManager.h:
+/usr/local/include/OGRE/OgreRenderQueue.h:
 
-/usr/local/include/OGRE/OgreSceneNode.h:
+/usr/local/include/OGRE/OgreIteratorWrappers.h:
 
-/usr/local/include/OGRE/OgreNode.h:
+/usr/local/include/OGRE/OgreIteratorWrapper.h:
 
-/usr/local/include/OGRE/OgreCommon.h:
+/usr/local/include/OGRE/OgreIteratorRange.h:
 
-/usr/local/include/OGRE/OgreMatrix3.h:
+/usr/local/include/OGRE/OgreAxisAlignedBox.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
@@ -300,9 +319,15 @@ Src/engine.d: ../Src/engine.cpp \
 
 /usr/local/include/OGRE/OgreMatrix4.h:
 
+/usr/local/include/OGRE/OgreMatrix3.h:
+
 /usr/local/include/OGRE/OgreVector4.h:
 
 /usr/local/include/OGRE/OgrePlane.h:
+
+/usr/local/include/OGRE/OgreSphere.h:
+
+/usr/local/include/OGRE/OgreShadowCaster.h:
 
 /usr/local/include/OGRE/OgreRenderable.h:
 
@@ -340,12 +365,6 @@ Src/engine.d: ../Src/engine.cpp \
 
 /usr/local/include/OGRE/Threading/OgreThreadDefinesBoost.h:
 
-/usr/local/include/OGRE/OgreIteratorWrappers.h:
-
-/usr/local/include/OGRE/OgreIteratorWrapper.h:
-
-/usr/local/include/OGRE/OgreIteratorRange.h:
-
 /usr/local/include/OGRE/OgreBlendMode.h:
 
 /usr/local/include/OGRE/OgreGpuProgram.h:
@@ -360,21 +379,31 @@ Src/engine.d: ../Src/engine.cpp \
 
 /usr/local/include/OGRE/OgreUserObjectBindings.h:
 
-/usr/local/include/OGRE/OgreMesh.h:
+/usr/local/include/OGRE/OgreFactoryObj.h:
 
-/usr/local/include/OGRE/OgreAxisAlignedBox.h:
+/usr/local/include/OGRE/OgreAnimable.h:
+
+/usr/local/include/OGRE/OgreVector2.h:
+
+/usr/local/include/OGRE/OgreStringVector.h:
+
+/usr/local/include/OGRE/OgreHardwareBufferManager.h:
+
+/usr/local/include/OGRE/OgreSingleton.h:
+
+/usr/local/include/OGRE/OgreHardwareCounterBuffer.h:
+
+/usr/local/include/OGRE/OgreHardwareUniformBuffer.h:
+
+/usr/local/include/OGRE/OgreRenderToVertexBuffer.h:
+
+/usr/local/include/OGRE/OgreMesh.h:
 
 /usr/local/include/OGRE/OgreVertexBoneAssignment.h:
 
 /usr/local/include/OGRE/OgreSkeleton.h:
 
-/usr/local/include/OGRE/OgreStringVector.h:
-
 /usr/local/include/OGRE/OgreAnimation.h:
-
-/usr/local/include/OGRE/OgreAnimable.h:
-
-/usr/local/include/OGRE/OgreVector2.h:
 
 /usr/local/include/OGRE/OgreAnimationTrack.h:
 
@@ -390,29 +419,35 @@ Src/engine.d: ../Src/engine.cpp \
 
 /usr/local/include/OGRE/OgreController.h:
 
-/usr/local/include/OGRE/OgreSceneQuery.h:
+/usr/local/include/OGRE/OgreResourceGroupManager.h:
 
-/usr/local/include/OGRE/OgreSphere.h:
+/usr/local/include/OGRE/OgreArchive.h:
+
+/usr/local/include/OGRE/OgreCamera.h:
+
+/usr/local/include/OGRE/OgreFrustum.h:
+
+/usr/local/include/OGRE/OgreMovablePlane.h:
 
 /usr/local/include/OGRE/OgreRay.h:
 
 /usr/local/include/OGRE/OgrePlaneBoundedVolume.h:
 
+/usr/local/include/OGRE/OgreViewport.h:
+
+/usr/local/include/OGRE/OgreSceneManager.h:
+
+/usr/local/include/OGRE/OgreSceneNode.h:
+
+/usr/local/include/OGRE/OgreNode.h:
+
+/usr/local/include/OGRE/OgreSceneQuery.h:
+
 /usr/local/include/OGRE/OgreAutoParamDataSource.h:
 
 /usr/local/include/OGRE/OgreLight.h:
 
-/usr/local/include/OGRE/OgreMovableObject.h:
-
-/usr/local/include/OGRE/OgreRenderQueue.h:
-
-/usr/local/include/OGRE/OgreShadowCaster.h:
-
-/usr/local/include/OGRE/OgreFactoryObj.h:
-
 /usr/local/include/OGRE/OgreShadowCameraSetup.h:
-
-/usr/local/include/OGRE/OgreMovablePlane.h:
 
 /usr/local/include/OGRE/OgreRenderQueueSortingGrouping.h:
 
@@ -442,15 +477,9 @@ Src/engine.d: ../Src/engine.cpp \
 
 /usr/local/include/OGRE/OgreSimpleRenderable.h:
 
-/usr/local/include/OGRE/OgreResourceGroupManager.h:
-
-/usr/local/include/OGRE/OgreArchive.h:
-
 /usr/local/include/OGRE/OgreShadowTextureManager.h:
 
 /usr/local/include/OGRE/OgreCamera.h:
-
-/usr/local/include/OGRE/OgreFrustum.h:
 
 /usr/local/include/OGRE/OgreInstancedGeometry.h:
 
@@ -492,65 +521,29 @@ Src/engine.d: ../Src/engine.cpp \
 
 /usr/local/include/OGRE/OgreNameGenerator.h:
 
-/usr/local/include/OGRE/OgreLodStrategyManager.h:
-
-/usr/local/include/OGRE/OgreLodStrategy.h:
-
-/usr/local/include/OGRE/OgreWorkQueue.h:
-
-/usr/include/OIS/OISEvents.h:
-
-/usr/include/OIS/OISPrereqs.h:
-
-/usr/include/OIS/OISConfig.h:
-
-/usr/include/OIS/OISInputManager.h:
-
-/usr/include/OIS/OISKeyboard.h:
-
-/usr/include/OIS/OISObject.h:
-
-/usr/include/OIS/OISInterface.h:
-
-/usr/include/OIS/OISEvents.h:
-
-/usr/include/OIS/OISMouse.h:
-
-/usr/local/include/OGRE/OgreEntity.h:
-
-/usr/local/include/OGRE/OgreHardwareBufferManager.h:
-
-/usr/local/include/OGRE/OgreHardwareCounterBuffer.h:
-
-/usr/local/include/OGRE/OgreHardwareUniformBuffer.h:
-
-/usr/local/include/OGRE/OgreRenderToVertexBuffer.h:
-
-/usr/local/include/OGRE/OgreCamera.h:
-
-/usr/local/include/OGRE/OgreViewport.h:
-
-/usr/local/include/OGRE/OgreSceneManager.h:
-
 /usr/local/include/OGRE/OgreRenderWindow.h:
 
 /usr/local/include/OGRE/OgreConfigFile.h:
 
 /usr/local/include/OGRE/OgreException.h:
 
-/usr/local/include/OGRE/OgreMeshManager.h:
-
-/usr/local/include/OGRE/OgrePatchMesh.h:
-
-/usr/local/include/OGRE/OgrePatchSurface.h:
-
 /usr/local/include/OGRE/OgreWindowEventUtilities.h:
-
-/home/jwoo/workspace/Assignment\ 3/Inc/inputMgr.h:
 
 /home/jwoo/workspace/Assignment\ 3/Inc/BaseApplication.h:
 
 /usr/local/include/OGRE/OgreLogManager.h:
+
+/usr/local/include/OGRE/OgreRoot.h:
+
+/usr/local/include/OGRE/OgreSceneManagerEnumerator.h:
+
+/usr/local/include/OGRE/OgreSceneManager.h:
+
+/usr/local/include/OGRE/OgreLodStrategyManager.h:
+
+/usr/local/include/OGRE/OgreLodStrategy.h:
+
+/usr/local/include/OGRE/OgreWorkQueue.h:
 
 /usr/local/include/OGRE/SdkTrays.h:
 
@@ -587,6 +580,10 @@ Src/engine.d: ../Src/engine.cpp \
 /usr/local/include/OGRE/OgreManualObject.h:
 
 /usr/local/include/OGRE/OgreMeshManager.h:
+
+/usr/local/include/OGRE/OgrePatchMesh.h:
+
+/usr/local/include/OGRE/OgrePatchSurface.h:
 
 /usr/local/include/OGRE/OgreMeshSerializer.h:
 
@@ -763,5 +760,9 @@ Src/engine.d: ../Src/engine.cpp \
 /home/jwoo/workspace/Assignment\ 3/Inc/Types.h:
 
 /home/jwoo/workspace/Assignment\ 3/Inc/gameMgr.h:
+
+/home/jwoo/workspace/Assignment\ 3/Inc/GfxMgr.h:
+
+/usr/local/include/OGRE/OgreMeshManager.h:
 
 /usr/local/include/OGRE/OgreTimer.h:

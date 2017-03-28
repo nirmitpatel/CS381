@@ -9,7 +9,6 @@
 #define INC_GFXMGR_H_
 
 #include <mgr.h>
-#include <engine.h>
 #include <OgreRoot.h>
 #include <OISEvents.h>
 #include <OISInputManager.h>
@@ -26,6 +25,7 @@
 #include <OgreMeshManager.h>
 #include <OgreWindowEventUtilities.h>
 
+class Engine;
 class GfxMgr : public Mgr, public Ogre::WindowEventListener, public Ogre::FrameListener{
 public:
 
@@ -43,6 +43,7 @@ public:
 	Ogre::RenderWindow* mWindow;
 	Ogre::SceneManager* mSceneMgr;
 	Ogre::Camera* mCamera;
+	Ogre::SceneManager* ogreSceneManager;
 };
 
 

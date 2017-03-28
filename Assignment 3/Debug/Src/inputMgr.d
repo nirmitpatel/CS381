@@ -236,7 +236,15 @@ Src/inputMgr.d: ../Src/inputMgr.cpp \
  /usr/include/OIS/OISInputManager.h /usr/include/OIS/OISFactoryCreator.h \
  /usr/include/OIS/OISException.h /usr/include/OIS/OISEffect.h \
  /usr/include/OIS/OISForceFeedback.h \
- /usr/local/include/OGRE/SdkCameraMan.h
+ /usr/local/include/OGRE/SdkCameraMan.h \
+ /home/jwoo/workspace/Assignment\ 3/Inc/engine.h \
+ /home/jwoo/workspace/Assignment\ 3/Inc/EntityMgr.h \
+ /usr/local/include/OGRE/OgreVector3.h \
+ /home/jwoo/workspace/Assignment\ 3/Inc/Entity381.h \
+ /home/jwoo/workspace/Assignment\ 3/Inc/Types.h \
+ /home/jwoo/workspace/Assignment\ 3/Inc/gameMgr.h \
+ /home/jwoo/workspace/Assignment\ 3/Inc/GfxMgr.h \
+ /usr/local/include/OGRE/OgreMeshManager.h
 
 /home/jwoo/workspace/Assignment\ 3/Inc/inputMgr.h:
 
@@ -739,3 +747,19 @@ Src/inputMgr.d: ../Src/inputMgr.cpp \
 /usr/include/OIS/OISForceFeedback.h:
 
 /usr/local/include/OGRE/SdkCameraMan.h:
+
+/home/jwoo/workspace/Assignment\ 3/Inc/engine.h:
+
+/home/jwoo/workspace/Assignment\ 3/Inc/EntityMgr.h:
+
+/usr/local/include/OGRE/OgreVector3.h:
+
+/home/jwoo/workspace/Assignment\ 3/Inc/Entity381.h:
+
+/home/jwoo/workspace/Assignment\ 3/Inc/Types.h:
+
+/home/jwoo/workspace/Assignment\ 3/Inc/gameMgr.h:
+
+/home/jwoo/workspace/Assignment\ 3/Inc/GfxMgr.h:
+
+/usr/local/include/OGRE/OgreMeshManager.h:

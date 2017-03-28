@@ -26,8 +26,8 @@
 #include <OgreWindowEventUtilities.h>
 #include <BaseApplication.h>
 
-
-class InputMgr : Mgr{
+class Engine;
+class InputMgr : Mgr, public Ogre::WindowEventListener, public Ogre::FrameListener{
 public:
 	InputMgr();
 	InputMgr(Engine* engine);
@@ -37,7 +37,7 @@ public:
 	virtual void loadLevel();
 	virtual void stop();
 
-	virtual bool keyPressed();
+	virtual bool keyPressed(const OIS::KeyEvent& ke);
 	virtual bool keyReleased();
 
 	OIS::InputManager* mInputMgr;

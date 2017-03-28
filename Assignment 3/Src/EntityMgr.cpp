@@ -7,11 +7,10 @@
 
 
 #include <EntityMgr.h>
-#include <Types.h>
+#include <engine.h>
 
 
-EntityMgr::EntityMgr(Ogre::SceneManager *ogreSM) : Mgr(engine){
-	ogreSceneMgr = ogreSM;
+EntityMgr::EntityMgr(Engine *eng): Mgr(eng){
 	entities.clear();
 	selectedEntity = 0;
 }
@@ -20,11 +19,31 @@ EntityMgr::~EntityMgr(){
 	entities.clear();
 }
 
+void EntityMgr::tick(float dt){
+	for (std::list<Entity381 *>::const_iterator it = entities.begin(); it != entities.end(); ++it){
+		(*it)->Tick(dt);
+		if ((*it)->isSelected)
+			this->selectedEntity = (*it);
+	}
+}
+
+void EntityMgr::init(){
+	return;
+}
+
+void EntityMgr::loadLevel(){
+
+}
+
+void EntityMgr::stop(){
+	return;
+}
+
 void EntityMgr::CreateOgreEntityAndNode(Entity381 *ent){
 
 	if(ent) {
-		ent->ogreEntity = ogreSceneMgr->createEntity(ent->meshfile);
-		ent->ogreSceneNode = ogreSceneMgr->getRootSceneNode()->createChildSceneNode(ent->pos);
+		ent->ogreEntity = engine->gfxMgr->ogreSceneManager->createEntity(ent->meshfile);
+		ent->ogreSceneNode = engine->gfxMgr->ogreSceneManager->getRootSceneNode()->createChildSceneNode(ent->pos);
 		ent->ogreSceneNode->attachObject(ent->ogreEntity);
 		ent->ogreSceneNode->yaw(Ogre::Radian(ent->heading));
 	}
@@ -60,15 +79,6 @@ Entity381* EntityMgr::CreateEntity(EntityType entityType, Ogre::Vector3 position
 	return ent;
 }
 
-void EntityMgr::Tick(float dt){
-
-	for (std::list<Entity381 *>::const_iterator it = entities.begin(); it != entities.end(); ++it){
-		(*it)->Tick(dt);
-		if ((*it)->isSelected)
-			this->selectedEntity = (*it);
-	}
-}
-
 void EntityMgr::SelectNextEntity(){
 	int n = 0;
 
@@ -88,57 +98,6 @@ void EntityMgr::SelectNextEntity(){
 			break;
 		}
 	}
-}
-
-EntityMgr::EntityMgr(Engine* engine) : Mgr(engine){
-
-	Entity381 * ent;
-	int x = 0;
-	ent = entityMgr->CreateEntity(EntityType::DDG, Ogre::Vector3(x, 0, 0), 0);
-	std::cout << "Created: " << ent->meshfile << std::endl;
-	x = x+200;
-	ent = entityMgr->CreateEntity(EntityType::CIGARETTE, Ogre::Vector3(x, 0, 0), 0);
-	std::cout << "Created: " << ent->meshfile << std::endl;
-	x = x+200;
-	ent = entityMgr->CreateEntity(EntityType::ALIEN, Ogre::Vector3(x, 0, 0), 0);
-	std::cout << "Created: " << ent->meshfile << std::endl;
-	x = x+200;
-	ent = entityMgr->CreateEntity(EntityType::CVN, Ogre::Vector3(x, 0, 0), 0);
-	std::cout << "Created: " << ent->meshfile << std::endl;
-	x = x+300;
-	ent = entityMgr->CreateEntity(EntityType::FRIGATE, Ogre::Vector3(x, 0, 0), 0);
-	std::cout << "Created: " << ent->meshfile << std::endl;
-
-
-	ent->isSelected = true;
 
 }
-
-
-
-
-void EntityMgr::init(){
-
-}
-
-void EntityMgr::loadLevel(){
-
-}
-
-void EntityMgr::stop(){
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 

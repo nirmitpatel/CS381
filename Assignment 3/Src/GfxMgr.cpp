@@ -11,7 +11,7 @@
 using namespace std;
 
 GfxMgr::GfxMgr(Engine* engine) : Mgr(engine), mRoot(0), mResourcesCfg(Ogre::StringUtil::BLANK),
-		mPluginsCfg(Ogre::StringUtil::BLANK), mWindow(0), mSceneMgr(0), mCamera(0){
+		mPluginsCfg(Ogre::StringUtil::BLANK), mWindow(0), mSceneMgr(0), mCamera(0), ogreSceneManager(0){
 }
 
 GfxMgr::~GfxMgr(){
@@ -60,7 +60,7 @@ void GfxMgr::init(){
 	  }
 
 	  if (!(mRoot->restoreConfig() || mRoot->showConfigDialog()))
-	      engine->keepRunning = false;
+	    engine->keepRunning = false;
 
 	  mRoot->restoreConfig();
 	  mRoot->showConfigDialog();
@@ -98,9 +98,6 @@ void GfxMgr::loadLevel(){
 
 	  Ogre::Light* light = mSceneMgr->createLight("MainLight");
 	  light->setPosition(20, 80, 50);
-
-	  // OIS
-	  Ogre::LogManager::getSingletonPtr()->logMessage("*** Initializing OIS ***");
 
 	  OIS::ParamList pl;
 	  size_t windowHandle = 0;

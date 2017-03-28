@@ -18,31 +18,33 @@
 #include <Entity381.h>
 #include <mgr.h>
 
+class Engine;
 
-class EntityMgr : Mgr{
+class EntityMgr: public Mgr {
 
 private:
-//
-public:
 	std::list<Entity381 *> entities;
-	Ogre::SceneManager *ogreSceneMgr;
+	//
+public:
+
+//	Ogre::SceneManager *ogreSceneMgr;
 	Entity381* selectedEntity;
 
-	EntityMgr(Ogre::SceneManager *ogreSceneMgr);
+	EntityMgr(Engine *eng);
+	//EntityMgr(Ogre::SceneManager *ogreSceneMgr);
 	~EntityMgr();
 
-	Entity381 *CreateEntity(EntityType entityType, Ogre::Vector3 pos, float yaw = 0);
-	void CreateOgreEntityAndNode(Entity381 *ent);
-	void Tick(float dt);
-	void SelectNextEntity();
-
 	virtual void init();
+	virtual void tick(float dt);
 	virtual void loadLevel();
 	virtual void stop();
 
-	EntityMgr(Engine* engine);
+	Entity381 *CreateEntity(EntityType entityType, Ogre::Vector3 pos, float yaw = 0);
+	void CreateOgreEntityAndNode(Entity381 *ent);
+	//void Tick(float dt);
+	void SelectNextEntity();
 
-	EntityMgr *entityMgr;
+
 };
 
 

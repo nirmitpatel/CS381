@@ -8,12 +8,12 @@
 #ifndef ENGINE_H_
 #define ENGINE_H_
 
-#include <GfxMgr.h>
 #include <inputMgr.h>
 #include <EntityMgr.h>
 #include <gameMgr.h>
+#include <GfxMgr.h>
 
-//class GfxMgr;
+
 class Engine {
 private:
 public:

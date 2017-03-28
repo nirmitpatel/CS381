@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="26" version="2.0">
+<workbench progressCount="21" version="2.0">
 <workbenchAdvisor/>
 <window height="771" maximized="true" width="1018" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -20,7 +20,7 @@
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="212" y="26"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.cdt.ui.editor.asm.AsmEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.make.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -36,25 +36,60 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="TutorialApplication.cpp" partName="TutorialApplication.cpp" path="/home/nirmitp/workspace/asg_2/src/TutorialApplication.cpp" title="TutorialApplication.cpp" tooltip="asg_2/src/TutorialApplication.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/asg_2/src/TutorialApplication.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2920" selectionTopPixel="1236"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.cpp" partName="Entity381.cpp" path="/home/nirmitp/workspace/AS3/src/Entity381.cpp" title="Entity381.cpp" tooltip="AS3/src/Entity381.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AS3/src/Entity381.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1068" selectionTopPixel="508"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="EntityMgr.cpp" partName="EntityMgr.cpp" path="/home/nirmitp/workspace/asg_2/src/EntityMgr.cpp" title="EntityMgr.cpp" tooltip="asg_2/src/EntityMgr.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/asg_2/src/EntityMgr.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1980" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="engine.h" partName="engine.h" path="/home/nirmitp/workspace/AS3/inc/engine.h" title="engine.h" tooltip="AS3/inc/engine.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AS3/inc/engine.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="229" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.cpp" partName="Entity381.cpp" path="/home/nirmitp/workspace/asg_2/src/Entity381.cpp" title="Entity381.cpp" tooltip="asg_2/src/Entity381.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/asg_2/src/Entity381.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3437" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="GfxMgr.h" partName="GfxMgr.h" path="/home/nirmitp/workspace/AS3/inc/GfxMgr.h" title="GfxMgr.h" tooltip="AS3/inc/GfxMgr.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AS3/inc/GfxMgr.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="100" selectionOffset="344" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="resources.cfg" partName="resources.cfg" path="/home/nirmitp/workspace/asg_2/resources.cfg" title="resources.cfg" tooltip="asg_2/resources.cfg" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/asg_2/resources.cfg"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="273" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="InputMgr.h" partName="InputMgr.h" path="/home/nirmitp/workspace/AS3/inc/InputMgr.h" title="InputMgr.h" tooltip="AS3/inc/InputMgr.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AS3/inc/InputMgr.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="458" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="GameMgr.h" partName="GameMgr.h" path="/home/nirmitp/workspace/AS3/inc/GameMgr.h" title="GameMgr.h" tooltip="AS3/inc/GameMgr.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AS3/inc/GameMgr.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="451" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="mgr.h" partName="mgr.h" path="/home/nirmitp/workspace/AS3/inc/mgr.h" title="mgr.h" tooltip="AS3/inc/mgr.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AS3/inc/mgr.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="99" selectionOffset="193" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="EntityMgr.h" partName="EntityMgr.h" path="/home/nirmitp/workspace/AS3/inc/EntityMgr.h" title="EntityMgr.h" tooltip="AS3/inc/EntityMgr.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AS3/inc/EntityMgr.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="717" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Types.h" partName="Types.h" path="/home/nirmitp/workspace/AS3/inc/Types.h" title="Types.h" tooltip="AS3/inc/Types.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AS3/inc/Types.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="155" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.h" partName="Entity381.h" path="/home/nirmitp/workspace/AS3/inc/Entity381.h" title="Entity381.h" tooltip="AS3/inc/Entity381.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AS3/inc/Entity381.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="962" selectionTopPixel="581"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="as3.h" partName="as3.h" path="/home/nirmitp/workspace/AS3/inc/as3.h" title="as3.h" tooltip="AS3/inc/as3.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AS3/inc/as3.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="as3.cpp" partName="as3.cpp" path="/home/nirmitp/workspace/AS3/src/as3.cpp" title="as3.cpp" tooltip="AS3/src/as3.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AS3/src/as3.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="79" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -65,7 +100,9 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (5 items)"/>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (2 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="651" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="474"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -95,7 +132,7 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -275,176 +312,168 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Project2/src/As2.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/asg_2/resources.cfg"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" path="/asg_2/Mesh/material/programs/Example_FresnelPS.asm"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Project2/src/Entity381.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Project2/inc/EntityMgr.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Project2/src/EntityMgr.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Project2/inc/As2.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Project2/inc/BaseApplication.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Project2/inc/Entity381.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Project2/inc/EntityMgr.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Project2/src/As2.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Project2/src/BaseApplication.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Project2/src/Entity381.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Project2/src/EntityMgr.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/asg_2/inc/Entity381.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/asg_2/src/TutorialApplication.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/asg_2/src/EntityMgr.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/asg_2/src/Entity381.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/asg_2/src/BaseApplication.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/asg_2/Mesh/ddg51.mesh"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AS3/src/Entity381.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AS3/inc/GameMgr.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AS3/inc/engine.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AS3/inc/GfxMgr.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AS3/inc/InputMgr.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AS3/inc/mgr.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AS3/inc/EntityMgr.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AS3/inc/Aspect.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AS3/inc/Types.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AS3/inc/Entity381.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AS3/inc/as3.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/AS3/src/as3.cpp"/>
 </editors>
-<item historyLabel="Example_FresnelPS.asm" index="2">
+<item historyLabel="EntityMgr.h" index="6">
+<position info="not_deleted" x="476" y="13"/>
+</item>
+<item historyLabel="GfxMgr.h" index="3">
+<position info="not_deleted" x="285" y="163"/>
+</item>
+<item historyLabel="InputMgr.h" index="4">
+<position info="not_deleted" x="461" y="0"/>
+</item>
+<item historyLabel="GfxMgr.h" index="3">
+<position info="not_deleted" x="121" y="327"/>
+</item>
+<item historyLabel="InputMgr.h" index="4">
+<position info="not_deleted" x="353" y="0"/>
+</item>
+<item historyLabel="GameMgr.h" index="1">
+<position info="not_deleted" x="455" y="0"/>
+</item>
+<item historyLabel="GfxMgr.h" index="3">
+<position info="not_deleted" x="121" y="327"/>
+</item>
+<item historyLabel="GameMgr.h" index="1">
+<position info="not_deleted" x="346" y="0"/>
+</item>
+<item historyLabel="EntityMgr.h" index="6">
+<position info="not_deleted" x="310" y="0"/>
+</item>
+<item historyLabel="engine.h" index="2">
+<position info="not_deleted" x="240" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="0">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="engine.h" index="2">
+<position info="not_deleted" x="229" y="0"/>
+</item>
+<item historyLabel="EntityMgr.h" index="6">
+<position info="not_deleted" x="310" y="0"/>
+</item>
+<item historyLabel="mgr.h" index="5">
+<position info="not_deleted" x="193" y="99"/>
+</item>
+<item historyLabel="GfxMgr.h" index="3">
+<position info="not_deleted" x="344" y="100"/>
+</item>
+<item historyLabel="InputMgr.h" index="4">
+<position info="not_deleted" x="458" y="0"/>
+</item>
+<item historyLabel="GameMgr.h" index="1">
+<position info="not_deleted" x="451" y="0"/>
+</item>
+<item historyLabel="EntityMgr.h" index="6">
+<position info="not_deleted" x="717" y="0"/>
+</item>
+<item historyLabel="InputMgr.h" index="4">
+<position info="not_deleted" x="458" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="0">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="Aspect.h" index="7">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="0">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="engine.h" index="2">
+<position info="not_deleted" x="229" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="0">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="engine.h" index="2">
+<position info="not_deleted" x="229" y="0"/>
+</item>
+<item historyLabel="GfxMgr.h" index="3">
+<position info="not_deleted" x="344" y="100"/>
+</item>
+<item historyLabel="InputMgr.h" index="4">
+<position info="not_deleted" x="458" y="0"/>
+</item>
+<item historyLabel="GameMgr.h" index="1">
+<position info="not_deleted" x="451" y="0"/>
+</item>
+<item historyLabel="mgr.h" index="5">
+<position info="not_deleted" x="193" y="99"/>
+</item>
+<item historyLabel="EntityMgr.h" index="6">
+<position info="not_deleted" x="717" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="0">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="Types.h" index="8">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="0">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="Entity381.h" index="9">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="0">
+<position info="not_deleted" x="1068" y="0"/>
+</item>
+<item historyLabel="Entity381.h" index="9">
+<position info="not_deleted" x="171" y="17"/>
+</item>
+<item historyLabel="Entity381.cpp" index="0">
+<position info="not_deleted" x="142" y="0"/>
+</item>
+<item historyLabel="Entity381.h" index="9">
+<position info="not_deleted" x="181" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="0">
+<position info="not_deleted" x="142" y="0"/>
+</item>
+<item historyLabel="Entity381.h" index="9">
+<position info="not_deleted" x="189" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="0">
+<position info="not_deleted" x="142" y="0"/>
+</item>
+<item historyLabel="Types.h" index="8">
+<position info="not_deleted" x="120" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="0">
+<position info="not_deleted" x="1068" y="0"/>
+</item>
+<item historyLabel="Types.h" index="8">
+<position info="not_deleted" x="155" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="0">
+<position info="not_deleted" x="1068" y="0"/>
+</item>
+<item historyLabel="Types.h" index="8">
+<position info="not_deleted" x="155" y="0"/>
+</item>
+<item historyLabel="Entity381.cpp" index="0">
+<position info="not_deleted" x="1068" y="0"/>
+</item>
+<item historyLabel="Entity381.h" index="9">
+<position info="not_deleted" x="962" y="0"/>
+</item>
+<item historyLabel="as3.h" index="10">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item active="true" historyLabel="as3.cpp" index="11">
 <position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="resources.cfg" index="1">
-<position info="not_deleted" x="789" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="3">
-<position info="not_deleted" x="2872" y="0"/>
-</item>
-<item historyLabel="EntityMgr.h" index="4">
-<position info="not_deleted" x="362" y="0"/>
-</item>
-<item historyLabel="EntityMgr.cpp" index="5">
-<position info="not_deleted" x="125" y="0"/>
-</item>
-<item historyLabel="As2.cpp" index="0">
-<position info="not_deleted" x="3649" y="0"/>
-</item>
-<item historyLabel="As2.h" index="6">
-<position/>
-</item>
-<item historyLabel="resources.cfg" index="1">
-<position info="not_deleted" x="789" y="0"/>
-</item>
-<item historyLabel="As2.h" index="6">
-<position/>
-</item>
-<item historyLabel="As2.h" index="6">
-<position info="not_deleted" x="77" y="0"/>
-</item>
-<item historyLabel="BaseApplication.h" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Entity381.h" index="8">
-<position info="not_deleted" x="77" y="0"/>
-</item>
-<item historyLabel="EntityMgr.h" index="9">
-<position info="not_deleted" x="77" y="0"/>
-</item>
-<item historyLabel="BaseApplication.h" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="As2.cpp" index="10">
-<position info="not_deleted" x="74" y="0"/>
-</item>
-<item historyLabel="BaseApplication.cpp" index="11">
-<position info="not_deleted" x="85" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="12">
-<position info="not_deleted" x="79" y="0"/>
-</item>
-<item historyLabel="EntityMgr.cpp" index="13">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="12">
-<position info="not_deleted" x="79" y="0"/>
-</item>
-<item historyLabel="BaseApplication.cpp" index="11">
-<position info="not_deleted" x="85" y="0"/>
-</item>
-<item historyLabel="As2.cpp" index="10">
-<position info="not_deleted" x="74" y="0"/>
-</item>
-<item historyLabel="BaseApplication.h" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="As2.h" index="6">
-<position info="not_deleted" x="77" y="0"/>
-</item>
-<item historyLabel="Entity381.h" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="15">
-<position info="not_deleted" x="79" y="0"/>
-</item>
-<item historyLabel="EntityMgr.cpp" index="16">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="17">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="BaseApplication.cpp" index="18">
-<position info="not_deleted" x="81" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="15">
-<position info="not_deleted" x="1627" y="0"/>
-</item>
-<item historyLabel="EntityMgr.cpp" index="16">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="17">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ddg51.mesh" index="19">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="17">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="BaseApplication.cpp" index="18">
-<position info="not_deleted" x="81" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="17">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="EntityMgr.cpp" index="16">
-<position info="not_deleted" x="125" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="15">
-<position info="not_deleted" x="2920" y="0"/>
-</item>
-<item historyLabel="EntityMgr.cpp" index="16">
-<position info="not_deleted" x="125" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="17">
-<position info="not_deleted" x="3437" y="0"/>
-</item>
-<item historyLabel="EntityMgr.cpp" index="16">
-<position info="not_deleted" x="125" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="15">
-<position info="not_deleted" x="2920" y="0"/>
-</item>
-<item historyLabel="EntityMgr.cpp" index="16">
-<position info="not_deleted" x="125" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="17">
-<position info="not_deleted" x="3437" y="0"/>
-</item>
-<item historyLabel="EntityMgr.cpp" index="16">
-<position info="not_deleted" x="125" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="17">
-<position info="not_deleted" x="3437" y="0"/>
-</item>
-<item historyLabel="TutorialApplication.cpp" index="15">
-<position info="not_deleted" x="2920" y="0"/>
-</item>
-<item historyLabel="resources.cfg" index="1">
-<position info="not_deleted" x="273" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="17">
-<position info="not_deleted" x="3437" y="0"/>
-</item>
-<item historyLabel="EntityMgr.cpp" index="16">
-<position info="not_deleted" x="1980" y="0"/>
-</item>
-<item active="true" historyLabel="Entity381.cpp" index="17">
-<position info="not_deleted" x="3437" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -463,50 +492,50 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="as3.cpp" tooltip="AS3/src/as3.cpp">
+<persistable path="/AS3/src/as3.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="as3.h" tooltip="AS3/inc/as3.h">
+<persistable path="/AS3/inc/as3.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.h" tooltip="AS3/inc/Entity381.h">
+<persistable path="/AS3/inc/Entity381.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Types.h" tooltip="AS3/inc/Types.h">
+<persistable path="/AS3/inc/Types.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Aspect.h" tooltip="AS3/inc/Aspect.h">
+<persistable path="/AS3/inc/Aspect.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="EntityMgr.h" tooltip="AS3/inc/EntityMgr.h">
+<persistable path="/AS3/inc/EntityMgr.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="mgr.h" tooltip="AS3/inc/mgr.h">
+<persistable path="/AS3/inc/mgr.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="GameMgr.h" tooltip="AS3/inc/GameMgr.h">
+<persistable path="/AS3/inc/GameMgr.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InputMgr.h" tooltip="AS3/inc/InputMgr.h">
+<persistable path="/AS3/inc/InputMgr.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="GfxMgr.h" tooltip="AS3/inc/GfxMgr.h">
+<persistable path="/AS3/inc/GfxMgr.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="engine.h" tooltip="AS3/inc/engine.h">
+<persistable path="/AS3/inc/engine.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.h" tooltip="asg_2/inc/Entity381.h">
+<persistable path="/asg_2/inc/Entity381.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.cpp" tooltip="AS3/src/Entity381.cpp">
+<persistable path="/AS3/src/Entity381.cpp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="resources.cfg" tooltip="asg_2/resources.cfg">
 <persistable path="/asg_2/resources.cfg"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="ddg51.mesh" tooltip="asg_2/Mesh/ddg51.mesh">
 <persistable path="/asg_2/Mesh/ddg51.mesh"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BaseApplication.cpp" tooltip="asg_2/src/BaseApplication.cpp">
-<persistable path="/asg_2/src/BaseApplication.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.cpp" tooltip="asg_2/src/Entity381.cpp">
-<persistable path="/asg_2/src/Entity381.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="EntityMgr.cpp" tooltip="asg_2/src/EntityMgr.cpp">
-<persistable path="/asg_2/src/EntityMgr.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TutorialApplication.cpp" tooltip="asg_2/src/TutorialApplication.cpp">
-<persistable path="/asg_2/src/TutorialApplication.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.h" tooltip="asg_2/inc/Entity381.h">
-<persistable path="/asg_2/inc/Entity381.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="EntityMgr.cpp" tooltip="Project2/src/EntityMgr.cpp">
-<persistable path="/Project2/src/EntityMgr.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.cpp" tooltip="Project2/src/Entity381.cpp">
-<persistable path="/Project2/src/Entity381.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BaseApplication.cpp" tooltip="Project2/src/BaseApplication.cpp">
-<persistable path="/Project2/src/BaseApplication.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="As2.cpp" tooltip="Project2/src/As2.cpp">
-<persistable path="/Project2/src/As2.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="EntityMgr.h" tooltip="Project2/inc/EntityMgr.h">
-<persistable path="/Project2/inc/EntityMgr.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.h" tooltip="Project2/inc/Entity381.h">
-<persistable path="/Project2/inc/Entity381.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BaseApplication.h" tooltip="Project2/inc/BaseApplication.h">
-<persistable path="/Project2/inc/BaseApplication.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="As2.h" tooltip="Project2/inc/As2.h">
-<persistable path="/Project2/inc/As2.h"/>
 </file>
 </mruList>
 </workbench>

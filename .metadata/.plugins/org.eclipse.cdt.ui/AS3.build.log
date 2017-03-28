@@ -1,0 +1,26 @@
+12:01:29 **** Incremental Build of configuration Debug for project AS3 ****
+make all 
+Building file: ../src/Entity381.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/nirmitp/workspace/AS3/inc" -I/usr/local/include/OGRE -I/usr/local/include/OGRE/Overlay -I/usr/include/ois -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+../src/Entity381.cpp: In constructor ‘Cigarette::Cigarette(Ogre::Vector3, float)’:
+../src/Entity381.cpp:68:68: error: ‘EntityType’ is not a class or namespace
+ Cigarette::Cigarette(Ogre::Vector3 pos, float heading) : Entity381(EntityType::CIGARETTE, pos, heading){
+                                                                    ^
+../src/Entity381.cpp: In constructor ‘Alien::Alien(Ogre::Vector3, float)’:
+../src/Entity381.cpp:78:60: error: ‘EntityType’ is not a class or namespace
+ Alien::Alien(Ogre::Vector3 pos, float heading) : Entity381(EntityType::ALIEN, pos, heading){
+                                                            ^
+../src/Entity381.cpp: In constructor ‘Cvn::Cvn(Ogre::Vector3, float)’:
+../src/Entity381.cpp:88:56: error: ‘EntityType’ is not a class or namespace
+ Cvn::Cvn(Ogre::Vector3 pos, float heading) : Entity381(EntityType::CVN, pos, heading){
+                                                        ^
+../src/Entity381.cpp: In constructor ‘Frigate::Frigate(Ogre::Vector3, float)’:
+../src/Entity381.cpp:98:64: error: ‘EntityType’ is not a class or namespace
+ Frigate::Frigate(Ogre::Vector3 pos, float heading) : Entity381(EntityType::FRIGATE, pos, heading){
+                                                                ^
+src/subdir.mk:33: recipe for target 'src/Entity381.o' failed
+make: *** [src/Entity381.o] Error 1
+
+12:01:31 Build Finished (took 1s.621ms)
+

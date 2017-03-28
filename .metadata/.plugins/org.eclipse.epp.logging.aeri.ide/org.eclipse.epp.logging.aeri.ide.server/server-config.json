@@ -1,7 +1,7 @@
 {
   "version": "v1",
-  "title": "Eclipse Automated Error Reporting",
-  "timestamp": 1488843598254,
+  "title": "Eclipse",
+  "timestamp": 1490140233163,
   "ttl": 10080,
   "helpUrl": "https://dev.eclipse.org/recommenders/community/aeri/v2/help/",
   "feedbackUrl": "http://ctrlflow.com/automated-error-reporting",
@@ -68,5 +68,5 @@
     "org.eclipse.pde.core::The current target platform contains errors*",
     "org.eclipse.ui::Conflicting handlers for*"
   ],
-  "problemsZipLastDownloadTimestamp": 1488843602164
+  "problemsZipLastDownloadTimestamp": 1490140237915
 }

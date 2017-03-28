@@ -1,23 +1,15 @@
-12:01:29 **** Incremental Build of configuration Debug for project AS3 ****
+15:53:23 **** Incremental Build of configuration Debug for project Assignment 3 ****
 make all 
-Building file: ../src/Entity381.cpp
+Building file: ../Src/inputMgr.cpp
 Invoking: GCC C++ Compiler
-g++ -I"/home/nirmitp/workspace/AS3/inc" -I/usr/local/include/OGRE -I/usr/local/include/OGRE/Overlay -I/usr/include/ois -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
-../src/Entity381.cpp: In constructor ‘Cigarette::Cigarette(Ogre::Vector3, float)’:
-../src/Entity381.cpp:68:68: error: ‘EntityType’ is not a class or namespace
- Cigarette::Cigarette(Ogre::Vector3 pos, float heading) : Entity381(EntityType::CIGARETTE, pos, heading){
-                                                                    ^
-../src/Entity381.cpp: In constructor ‘Alien::Alien(Ogre::Vector3, float)’:
-../src/Entity381.cpp:78:60: error: ‘EntityType’ is not a class or namespace
- Alien::Alien(Ogre::Vector3 pos, float heading) : Entity381(EntityType::ALIEN, pos, heading){
-                                                            ^
-../src/Entity381.cpp: In constructor ‘Cvn::Cvn(Ogre::Vector3, float)’:
-../src/Entity381.cpp:88:56: error: ‘EntityType’ is not a class or namespace
- Cvn::Cvn(Ogre::Vector3 pos, float heading) : Entity381(EntityType::CVN, pos, heading){
-                                                        ^
-../src/Entity381.cpp: In constructor ‘Frigate::Frigate(Ogre::Vector3, float)’:
-../src/Entity381.cpp:98:64: error: ‘EntityType’ is not a class or namespace
- Frigate::Frigate(Ogre::Vector3 pos, float heading) : Entity381(EntityType::FRIGATE, pos, heading){
-                                                                ^
-src/subdir.mk:33: recipe for target 'src/Entity381.o' failed
-make: *** [src/Entity381.o] Error 1
+g++ -I"/home/nirmitp/workspace/Assignment 3/Inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -I/usr/local/include/OGRE -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -MMD -MP -MF"Src/inputMgr.d" -MT"Src/inputMgr.d" -o "Src/inputMgr.o" "../Src/inputMgr.cpp"
+Finished building: ../Src/inputMgr.cpp
+ 
+Building target: Assignment 3
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "Assignment 3"  ./Src/Aspect.o ./Src/BaseApplication.o ./Src/Entity381.o ./Src/EntityMgr.o ./Src/GfxMgr.o ./Src/as3.o ./Src/engine.o ./Src/gameMgr.o ./Src/inputMgr.o ./Src/mgr.o   -lOgreMain -lOgreOverlay -lboost_system -lOIS
+Finished building target: Assignment 3
+ 
+15:53:40 **** Incremental Build of configuration Debug for project Assignment 3 ****
+make all 
+make: Nothing to be done for 'all'.

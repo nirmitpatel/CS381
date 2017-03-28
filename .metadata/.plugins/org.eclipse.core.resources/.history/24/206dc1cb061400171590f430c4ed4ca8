@@ -1,0 +1,201 @@
+/*
+ * inputMgr.cpp
+ *
+ *  Created on: Mar 17, 2017
+ *      Author: jwoo
+ */
+
+
+#include <inputMgr.h>
+#include <engine.h>
+using namespace std;
+
+
+InputMgr::InputMgr() : Mgr(engine){
+
+}
+
+InputMgr::InputMgr(Engine* engine) : Mgr(engine){
+	dt = 25.0f;
+	move = 400.0f;
+	dirVec = Ogre::Vector3::ZERO;
+}
+
+void InputMgr::tick(float dt){
+
+	if (engine->gfxMgr->mWindow->isClosed()) engine->stop();
+
+	mKeyboard->capture();
+	mMouse->capture();
+
+	if (mKeyboard->isKeyDown(OIS::KC_ESCAPE))
+	{
+		engine->stop();
+	}
+
+	engine->gfxMgr->mCamera->translate(dirVec * dt, Ogre::Node::TS_LOCAL);
+	engine->gfxMgr->mCamera->pitch(Ogre::Degree(5 * rotate));
+	engine->gfxMgr->mCamera->yaw(Ogre::Degree(5 * yaw));
+}
+
+void InputMgr::init(){
+
+	// OIS
+	  Ogre::LogManager::getSingletonPtr()->logMessage("*** Initializing OIS ***");
+
+	  OIS::ParamList pl;
+
+
+		// insert the following lines right before calling mInputSystem = OIS::InputManager::createInputSystem( paramList );
+		    #if defined OIS_WIN32_PLATFORM
+		    pl.insert(std::make_pair(std::string("w32_mouse"), std::string("DISCL_FOREGROUND" )));
+		    pl.insert(std::make_pair(std::string("w32_mouse"), std::string("DISCL_NONEXCLUSIVE")));
+		    pl.insert(std::make_pair(std::string("w32_keyboard"), std::string("DISCL_FOREGROUND")));
+		    pl.insert(std::make_pair(std::string("w32_keyboard"), std::string("DISCL_NONEXCLUSIVE")));
+		    #elif defined OIS_LINUX_PLATFORM
+		    pl.insert(std::make_pair(std::string("x11_mouse_grab"), std::string("false")));
+		    pl.insert(std::make_pair(std::string("x11_mouse_hide"), std::string("false")));
+		    pl.insert(std::make_pair(std::string("x11_keyboard_grab"), std::string("false")));
+		    pl.insert(std::make_pair(std::string("XAutoRepeatOn"), std::string("true")));
+		    #endif
+
+	  size_t windowHandle = 0;
+	  std::ostringstream windowHandleStr;
+
+	  engine->gfxMgr->mWindow->getCustomAttribute("WINDOW", &windowHandle);
+	  windowHandleStr << windowHandle;
+	  pl.insert(std::make_pair(std::string("WINDOW"), windowHandleStr.str()));
+
+	  mInputMgr = OIS::InputManager::createInputSystem(pl);
+
+	  mKeyboard = static_cast<OIS::Keyboard*>(
+	    mInputMgr->createInputObject(OIS::OISKeyboard, true));
+	  mMouse = static_cast<OIS::Mouse*>(
+	    mInputMgr->createInputObject(OIS::OISMouse, true));
+
+	  if(mKeyboard->isKeyDown(OIS::KC_ESCAPE)){
+	      engine->stop();
+	  	}
+
+	  windowResized(engine->gfxMgr->mWindow);
+	  	  Ogre::WindowEventUtilities::addWindowEventListener(engine->gfxMgr->mWindow, this);
+
+	  	  mKeyboard->setEventCallback(this);
+
+	  engine->gfxMgr->mRoot->addFrameListener(this);
+
+}
+
+
+void InputMgr::loadLevel(){
+}
+
+void InputMgr::stop(){
+}
+
+bool InputMgr::keyPressed(const OIS::KeyEvent& ke){
+	switch (ke.key)
+		{
+			case OIS::KC_TAB:
+				engine->entityMgr->SelectNextEntity();
+				break;
+			case OIS::KC_W:
+				dirVec.z -= move;
+				break;
+			case OIS::KC_S:
+				dirVec.z += move;
+				break;
+			case OIS::KC_R:
+				dirVec.y += move;
+				break;
+			case OIS::KC_F:
+				dirVec.y -= move;
+				break;
+			case OIS::KC_A:
+				dirVec.x -= move;
+				break;
+			case OIS::KC_D:
+				dirVec.x += move;
+				break;
+			case OIS::KC_Q:
+				yaw = 0.1f;
+				break;
+			case OIS::KC_E:
+				yaw = -0.1f;
+				break;
+			case OIS::KC_X:
+				rotate = -0.1f;
+				break;
+			case OIS::KC_Z:
+				rotate = 0.1f;
+				break;
+
+			default:
+				//engine->entityMgr->UpdateVelocity(ke);
+				break;
+	}
+	return true;
+}
+
+bool InputMgr::keyReleased(const OIS::KeyEvent& ke){
+	switch (ke.key)
+		{
+			case OIS::KC_W:
+				dirVec.z = 0;
+				break;
+			case OIS::KC_S:
+				dirVec.z = 0;
+				break;
+			case OIS::KC_R:
+				dirVec.y = 0;
+				break;
+			case OIS::KC_F:
+				dirVec.y = 0;
+				break;
+			case OIS::KC_A:
+				dirVec.x = 0;
+				break;
+			case OIS::KC_D:
+				dirVec.x = 0;
+				break;
+			case OIS::KC_Q:
+				yaw = 0;
+				break;
+				case OIS::KC_E:
+				yaw = 0;
+				break;
+			case OIS::KC_X:
+				rotate = 0;
+				break;
+			case OIS::KC_Z:
+				rotate = 0;
+				break;
+
+			default:
+				break;
+	}
+	return true;
+}
+
+void InputMgr::UpdateSelection()
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

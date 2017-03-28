@@ -1,6 +1,6 @@
 Src/Aspect.d: ../Src/Aspect.cpp \
- /home/jwoo/workspace/Assignment\ 3/Inc/Aspect.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/Entity381.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/Aspect.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/Entity381.h \
  /usr/local/include/OGRE/OgreVector3.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -66,12 +66,12 @@ Src/Aspect.d: ../Src/Aspect.cpp \
  /usr/local/include/OGRE/OgrePose.h \
  /usr/local/include/OGRE/OgreAnimationState.h \
  /usr/local/include/OGRE/OgreController.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/Types.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/Utils.h
+ /home/nirmitp/workspace/Assignment\ 3/Inc/Types.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/Utils.h
 
-/home/jwoo/workspace/Assignment\ 3/Inc/Aspect.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/Aspect.h:
 
-/home/jwoo/workspace/Assignment\ 3/Inc/Entity381.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/Entity381.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
@@ -205,6 +205,6 @@ Src/Aspect.d: ../Src/Aspect.cpp \
 
 /usr/local/include/OGRE/OgreController.h:
 
-/home/jwoo/workspace/Assignment\ 3/Inc/Types.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/Types.h:
 
-/home/jwoo/workspace/Assignment\ 3/Inc/Utils.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/Utils.h:

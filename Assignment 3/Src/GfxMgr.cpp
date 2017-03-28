@@ -73,7 +73,7 @@ void GfxMgr::init(){
 	  mSceneMgr = mRoot->createSceneManager(Ogre::ST_GENERIC);
 
 	  mCamera = mSceneMgr->createCamera("MainCam");
-	  mCamera->setPosition(0, 0, 80);
+	  mCamera->setPosition(0, 0, 500);
 	  mCamera->lookAt(0, 0, -300);
 	  mCamera->setNearClipDistance(5);
 
@@ -83,6 +83,10 @@ void GfxMgr::init(){
 	  mCamera->setAspectRatio(
 	  Ogre::Real(vp->getActualWidth()) /
 	  Ogre::Real(vp->getActualHeight()));
+/*
+	  CameraNode = ogreSceneManager->getRootSceneNode()->createChildSceneNode();
+	  CameraNode->setPosition(0, 200, 500);
+	  CameraNode->attachObject(mCamera);*/
 }
 
 

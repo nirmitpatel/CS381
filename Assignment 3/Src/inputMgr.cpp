@@ -16,19 +16,26 @@ InputMgr::InputMgr() : Mgr(engine){
 }
 
 InputMgr::InputMgr(Engine* engine) : Mgr(engine){
-
+	dt = 25.0f;
+	move = 400.0f;
+	dirVec = Ogre::Vector3::ZERO;
 }
 
 void InputMgr::tick(float dt){
 
-	//cout << endl << "1" << endl << endl << endl;
-	/*if(mKeyboard->isKeyDown(OIS::KC_ESCAPE)){
-		cout << endl << "3" << endl << endl << endl;
-	    engine->stop();
-	    cout << endl << "4" << endl << endl << endl;
-		}*/
+	if (engine->gfxMgr->mWindow->isClosed()) engine->stop();
 
-	//cout << endl << "2" << endl << endl << endl;
+	mKeyboard->capture();
+	mMouse->capture();
+
+	if (mKeyboard->isKeyDown(OIS::KC_ESCAPE))
+	{
+		engine->stop();
+	}
+
+	//engine->gfxMgr->CameraNode->translate(dirVec * dt, Ogre::Node::TS_LOCAL);
+	engine->gfxMgr->mCamera->pitch(Ogre::Degree(1 * rotate));
+	engine->gfxMgr->mCamera->yaw(Ogre::Degree(1 * yaw));
 }
 
 void InputMgr::init(){
@@ -66,52 +73,110 @@ void InputMgr::init(){
 	  mMouse = static_cast<OIS::Mouse*>(
 	    mInputMgr->createInputObject(OIS::OISMouse, true));
 
-	  if(mKeyboard->isKeyDown(OIS::KC_ESCAPE)){
-	      engine->stop();
-	  	}
-
-	  /*windowResized(engine->gfxMgr->mWindow);
+	  windowResized(engine->gfxMgr->mWindow);
 	  	  Ogre::WindowEventUtilities::addWindowEventListener(engine->gfxMgr->mWindow, this);
 
 	  	  mKeyboard->setEventCallback(this);
 
-	  engine->gfxMgr->mRoot->addFrameListener(this);*/
-
-
-
-
+	  engine->gfxMgr->mRoot->addFrameListener(this);
 
 }
 
 
 void InputMgr::loadLevel(){
-
 }
 
 void InputMgr::stop(){
-
 }
 
-
-
-
 bool InputMgr::keyPressed(const OIS::KeyEvent& ke){
+	switch (ke.key)
+		{
+			case OIS::KC_TAB:
+				engine->entityMgr->SelectNextEntity();
+				break;
+			case OIS::KC_W:
+				dirVec.z -= move;
+				break;
+			case OIS::KC_S:
+				dirVec.z += move;
+				break;
+			case OIS::KC_R:
+				dirVec.y += move;
+				break;
+			case OIS::KC_F:
+				dirVec.y -= move;
+				break;
+			case OIS::KC_A:
+				dirVec.x -= move;
+				break;
+			case OIS::KC_D:
+				dirVec.x += move;
+				break;
+			case OIS::KC_Q:
+				yaw = 0.1f;
+				break;
+			case OIS::KC_E:
+				yaw = -0.1f;
+				break;
+			case OIS::KC_X:
+				rotate = -0.1f;
+				break;
+			case OIS::KC_Z:
+				rotate = 0.1f;
+				break;
 
-	if(mKeyboard->isKeyDown(OIS::KC_ESCAPE)){
-    engine->stop();
+			default:
+				//engine->entityMgr->UpdateVelocity(ke);
+				break;
 	}
-
 	return true;
 }
 
+bool InputMgr::keyReleased(const OIS::KeyEvent& ke){
+	switch (ke.key)
+		{
+			case OIS::KC_W:
+				dirVec.z = 0;
+				break;
+			case OIS::KC_S:
+				dirVec.z = 0;
+				break;
+			case OIS::KC_R:
+				dirVec.y = 0;
+				break;
+			case OIS::KC_F:
+				dirVec.y = 0;
+				break;
+			case OIS::KC_A:
+				dirVec.x = 0;
+				break;
+			case OIS::KC_D:
+				dirVec.x = 0;
+				break;
+			case OIS::KC_Q:
+				yaw = 0;
+				break;
+				case OIS::KC_E:
+				yaw = 0;
+				break;
+			case OIS::KC_X:
+				rotate = 0;
+				break;
+			case OIS::KC_Z:
+				rotate = 0;
+				break;
 
-
-
-bool InputMgr::keyReleased(){
-
+			default:
+				break;
+	}
+	return true;
 }
 
+void InputMgr::UpdateSelection()
+{
 
+}
 
 
 

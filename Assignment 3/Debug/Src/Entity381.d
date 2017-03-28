@@ -1,5 +1,5 @@
 Src/Entity381.d: ../Src/Entity381.cpp \
- /home/jwoo/workspace/Assignment\ 3/Inc/Entity381.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/Entity381.h \
  /usr/local/include/OGRE/OgreVector3.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -65,10 +65,10 @@ Src/Entity381.d: ../Src/Entity381.cpp \
  /usr/local/include/OGRE/OgrePose.h \
  /usr/local/include/OGRE/OgreAnimationState.h \
  /usr/local/include/OGRE/OgreController.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/Types.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/Aspect.h
+ /home/nirmitp/workspace/Assignment\ 3/Inc/Types.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/Aspect.h
 
-/home/jwoo/workspace/Assignment\ 3/Inc/Entity381.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/Entity381.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
@@ -202,6 +202,6 @@ Src/Entity381.d: ../Src/Entity381.cpp \
 
 /usr/local/include/OGRE/OgreController.h:
 
-/home/jwoo/workspace/Assignment\ 3/Inc/Types.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/Types.h:
 
-/home/jwoo/workspace/Assignment\ 3/Inc/Aspect.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/Aspect.h:

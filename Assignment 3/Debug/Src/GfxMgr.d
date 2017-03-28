@@ -1,6 +1,6 @@
 Src/GfxMgr.d: ../Src/GfxMgr.cpp \
- /home/jwoo/workspace/Assignment\ 3/Inc/GfxMgr.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/mgr.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/GfxMgr.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/mgr.h \
  /usr/local/include/OGRE/OgreRoot.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -140,9 +140,9 @@ Src/GfxMgr.d: ../Src/GfxMgr.cpp \
  /usr/local/include/OGRE/OgrePatchMesh.h \
  /usr/local/include/OGRE/OgrePatchSurface.h \
  /usr/local/include/OGRE/OgreWindowEventUtilities.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/engine.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/inputMgr.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/BaseApplication.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/engine.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/inputMgr.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/BaseApplication.h \
  /usr/local/include/OGRE/OgreLogManager.h \
  /usr/local/include/OGRE/SdkTrays.h /usr/local/include/OGRE/Ogre.h \
  /usr/local/include/OGRE/OgreArchiveManager.h \
@@ -239,15 +239,15 @@ Src/GfxMgr.d: ../Src/GfxMgr.cpp \
  /usr/include/OIS/OISException.h /usr/include/OIS/OISEffect.h \
  /usr/include/OIS/OISForceFeedback.h \
  /usr/local/include/OGRE/SdkCameraMan.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/EntityMgr.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/EntityMgr.h \
  /usr/local/include/OGRE/OgreVector3.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/Entity381.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/Types.h \
- /home/jwoo/workspace/Assignment\ 3/Inc/gameMgr.h
+ /home/nirmitp/workspace/Assignment\ 3/Inc/Entity381.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/Types.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/gameMgr.h
 
-/home/jwoo/workspace/Assignment\ 3/Inc/GfxMgr.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/GfxMgr.h:
 
-/home/jwoo/workspace/Assignment\ 3/Inc/mgr.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/mgr.h:
 
 /usr/local/include/OGRE/OgreRoot.h:
 
@@ -543,11 +543,11 @@ Src/GfxMgr.d: ../Src/GfxMgr.cpp \
 
 /usr/local/include/OGRE/OgreWindowEventUtilities.h:
 
-/home/jwoo/workspace/Assignment\ 3/Inc/engine.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/engine.h:
 
-/home/jwoo/workspace/Assignment\ 3/Inc/inputMgr.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/inputMgr.h:
 
-/home/jwoo/workspace/Assignment\ 3/Inc/BaseApplication.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/BaseApplication.h:
 
 /usr/local/include/OGRE/OgreLogManager.h:
 
@@ -753,12 +753,12 @@ Src/GfxMgr.d: ../Src/GfxMgr.cpp \
 
 /usr/local/include/OGRE/SdkCameraMan.h:
 
-/home/jwoo/workspace/Assignment\ 3/Inc/EntityMgr.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/EntityMgr.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
-/home/jwoo/workspace/Assignment\ 3/Inc/Entity381.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/Entity381.h:
 
-/home/jwoo/workspace/Assignment\ 3/Inc/Types.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/Types.h:
 
-/home/jwoo/workspace/Assignment\ 3/Inc/gameMgr.h:
+/home/nirmitp/workspace/Assignment\ 3/Inc/gameMgr.h:

@@ -27,7 +27,7 @@
 #include <BaseApplication.h>
 
 class Engine;
-class InputMgr : Mgr, public Ogre::WindowEventListener, public Ogre::FrameListener{
+class InputMgr : public Mgr, public Ogre::WindowEventListener, public Ogre::FrameListener, public OIS::KeyListener{
 public:
 	InputMgr();
 	InputMgr(Engine* engine);
@@ -38,16 +38,20 @@ public:
 	virtual void stop();
 
 	virtual bool keyPressed(const OIS::KeyEvent& ke);
-	virtual bool keyReleased();
+	virtual bool keyReleased(const OIS::KeyEvent& ke);
+
+	void UpdateSelection();
 
 	OIS::InputManager* mInputMgr;
 	OIS::Keyboard* mKeyboard;
 	OIS::Mouse* mMouse;
+
+	float move;
+	float rotate;
+	float yaw;
+	float dt;
+
+	Ogre::Vector3 dirVec;
 };
-
-
-
-
-
 
 #endif /* INC_INPUTMGR_H_ */

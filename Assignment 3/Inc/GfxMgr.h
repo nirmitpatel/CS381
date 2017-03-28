@@ -44,6 +44,7 @@ public:
 	Ogre::SceneManager* mSceneMgr;
 	Ogre::Camera* mCamera;
 	Ogre::SceneManager* ogreSceneManager;
+	Ogre::SceneNode *CameraNode;
 };
 
 

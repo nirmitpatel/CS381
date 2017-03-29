@@ -9,6 +9,8 @@
 #include <EntityMgr.h>
 #include <engine.h>
 
+using namespace std;
+
 
 EntityMgr::EntityMgr(Engine *eng): Mgr(eng){
 	entities.clear();
@@ -19,7 +21,7 @@ EntityMgr::~EntityMgr(){
 	entities.clear();
 }
 
-void EntityMgr::tick(float dt){
+void EntityMgr::Tick(float dt){
 	for (std::list<Entity381 *>::const_iterator it = entities.begin(); it != entities.end(); ++it){
 		(*it)->Tick(dt);
 		if ((*it)->isSelected)
@@ -42,8 +44,11 @@ void EntityMgr::stop(){
 void EntityMgr::CreateOgreEntityAndNode(Entity381 *ent){
 
 	if(ent) {
+		cout << endl << "3" << endl << endl << endl;
 		ent->ogreEntity = engine->gfxMgr->ogreSceneManager->createEntity(ent->meshfile);
+		cout << endl << "6" << endl << endl << endl;
 		ent->ogreSceneNode = engine->gfxMgr->ogreSceneManager->getRootSceneNode()->createChildSceneNode(ent->pos);
+		cout << endl << "4" << endl << endl << endl;
 		ent->ogreSceneNode->attachObject(ent->ogreEntity);
 		ent->ogreSceneNode->yaw(Ogre::Radian(ent->heading));
 	}

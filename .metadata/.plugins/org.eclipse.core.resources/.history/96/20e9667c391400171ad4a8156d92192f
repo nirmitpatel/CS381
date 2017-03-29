@@ -1,0 +1,45 @@
+/*
+ * gameMgr.cpp
+ *
+ *  Created on: Mar 17, 2017
+ *      Author: jwoo
+ */
+
+#include <gameMgr.h>
+#include <engine.h>
+
+using namespace std;
+
+GameMgr::GameMgr() : Mgr(engine){
+
+}
+
+GameMgr::GameMgr(Engine* engine) : Mgr(engine){
+
+	Entity381* ent;
+	ent = engine->entityMgr->CreateEntity(EntityType::DDG, Ogre::Vector3 (0, 0, 0), 0);
+		  	engine->entityMgr->CreateEntity(EntityType::CVN, Ogre::Vector3 (200, 0, 0), 0);
+		  	engine->entityMgr->CreateEntity(EntityType::FRIGATE, Ogre::Vector3 (400, 0, 0), 0);
+		  	engine->entityMgr->CreateEntity(EntityType::CIGARETTE, Ogre::Vector3 (600, 0, 0), 0);
+		  	engine->entityMgr->CreateEntity(EntityType::ALIEN, Ogre::Vector3 (800, 0, 0), 0);
+		  	ent->isSelected = true;
+}
+
+
+
+void GameMgr::tick(float dt){
+
+}
+
+void GameMgr::init(){
+
+}
+
+
+void GameMgr::loadLevel(){
+
+}
+
+void GameMgr::stop(){
+
+}

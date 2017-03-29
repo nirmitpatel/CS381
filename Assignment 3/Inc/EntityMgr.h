@@ -15,17 +15,23 @@
 #include <OgreSceneNode.h>
 #include <OgreEntity.h>
 
+#include <OISEvents.h>
+#include <OISInputManager.h>
+#include <OISKeyboard.h>
+#include <OISMouse.h>
+
 #include <Entity381.h>
 #include <mgr.h>
+#include <Types.h>
+
 
 class Engine;
-
 class EntityMgr: public Mgr {
 
-private:
-	std::list<Entity381 *> entities;
 	//
 public:
+
+	std::list<Entity381 *> entities;
 
 //	Ogre::SceneManager *ogreSceneMgr;
 	Entity381* selectedEntity;
@@ -35,7 +41,7 @@ public:
 	~EntityMgr();
 
 	virtual void init();
-	virtual void tick(float dt);
+	virtual void Tick(float dt);
 	virtual void loadLevel();
 	virtual void stop();
 
@@ -44,7 +50,10 @@ public:
 	//void Tick(float dt);
 	void SelectNextEntity();
 
+	Entity381* boat[5];
 
+	Ogre::Vector3 velocity;
+	Ogre::Vector3 position;
 };
 
 

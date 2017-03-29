@@ -140,6 +140,11 @@ Src/GfxMgr.d: ../Src/GfxMgr.cpp \
  /usr/local/include/OGRE/OgrePatchMesh.h \
  /usr/local/include/OGRE/OgrePatchSurface.h \
  /usr/local/include/OGRE/OgreWindowEventUtilities.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/Types.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/Entity381.h \
+ /usr/local/include/OGRE/OgreVector3.h \
+ /usr/local/include/OGRE/OgreSceneNode.h \
+ /home/nirmitp/workspace/Assignment\ 3/Inc/EntityMgr.h \
  /home/nirmitp/workspace/Assignment\ 3/Inc/engine.h \
  /home/nirmitp/workspace/Assignment\ 3/Inc/inputMgr.h \
  /home/nirmitp/workspace/Assignment\ 3/Inc/BaseApplication.h \
@@ -204,7 +209,6 @@ Src/GfxMgr.d: ../Src/GfxMgr.cpp \
  /usr/local/include/OGRE/Overlay/OgreOverlay.h \
  /usr/local/include/OGRE/Overlay/OgreOverlayPrerequisites.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
- /usr/local/include/OGRE/OgreSceneNode.h \
  /usr/local/include/OGRE/OgreIteratorWrappers.h \
  /usr/local/include/OGRE/OgreMatrix4.h \
  /usr/local/include/OGRE/Overlay/OgreOverlayContainer.h \
@@ -239,10 +243,6 @@ Src/GfxMgr.d: ../Src/GfxMgr.cpp \
  /usr/include/OIS/OISException.h /usr/include/OIS/OISEffect.h \
  /usr/include/OIS/OISForceFeedback.h \
  /usr/local/include/OGRE/SdkCameraMan.h \
- /home/nirmitp/workspace/Assignment\ 3/Inc/EntityMgr.h \
- /usr/local/include/OGRE/OgreVector3.h \
- /home/nirmitp/workspace/Assignment\ 3/Inc/Entity381.h \
- /home/nirmitp/workspace/Assignment\ 3/Inc/Types.h \
  /home/nirmitp/workspace/Assignment\ 3/Inc/gameMgr.h
 
 /home/nirmitp/workspace/Assignment\ 3/Inc/GfxMgr.h:
@@ -543,6 +543,16 @@ Src/GfxMgr.d: ../Src/GfxMgr.cpp \
 
 /usr/local/include/OGRE/OgreWindowEventUtilities.h:
 
+/home/nirmitp/workspace/Assignment\ 3/Inc/Types.h:
+
+/home/nirmitp/workspace/Assignment\ 3/Inc/Entity381.h:
+
+/usr/local/include/OGRE/OgreVector3.h:
+
+/usr/local/include/OGRE/OgreSceneNode.h:
+
+/home/nirmitp/workspace/Assignment\ 3/Inc/EntityMgr.h:
+
 /home/nirmitp/workspace/Assignment\ 3/Inc/engine.h:
 
 /home/nirmitp/workspace/Assignment\ 3/Inc/inputMgr.h:
@@ -673,8 +683,6 @@ Src/GfxMgr.d: ../Src/GfxMgr.cpp \
 
 /usr/local/include/OGRE/OgrePrerequisites.h:
 
-/usr/local/include/OGRE/OgreSceneNode.h:
-
 /usr/local/include/OGRE/OgreIteratorWrappers.h:
 
 /usr/local/include/OGRE/OgreMatrix4.h:
@@ -752,13 +760,5 @@ Src/GfxMgr.d: ../Src/GfxMgr.cpp \
 /usr/include/OIS/OISForceFeedback.h:
 
 /usr/local/include/OGRE/SdkCameraMan.h:
-
-/home/nirmitp/workspace/Assignment\ 3/Inc/EntityMgr.h:
-
-/usr/local/include/OGRE/OgreVector3.h:
-
-/home/nirmitp/workspace/Assignment\ 3/Inc/Entity381.h:
-
-/home/nirmitp/workspace/Assignment\ 3/Inc/Types.h:
 
 /home/nirmitp/workspace/Assignment\ 3/Inc/gameMgr.h:

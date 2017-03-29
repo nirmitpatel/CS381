@@ -25,9 +25,12 @@
 
 #include <OgreWindowEventUtilities.h>
 #include <BaseApplication.h>
+#include <Types.h>
+#include <Entity381.h>
 
 class Engine;
-class InputMgr : public Mgr, public Ogre::WindowEventListener, public Ogre::FrameListener, public OIS::KeyListener{
+class InputMgr : public Mgr, public Ogre::WindowEventListener, public Ogre::FrameListener, public OIS::KeyListener,
+				 public OIS::MouseListener, OgreBites::SdkTrayListener{
 public:
 	InputMgr();
 	InputMgr(Engine* engine);
@@ -39,8 +42,13 @@ public:
 
 	virtual bool keyPressed(const OIS::KeyEvent& ke);
 	virtual bool keyReleased(const OIS::KeyEvent& ke);
+	virtual bool mouseMoved(const OIS::MouseEvent& me);
+	virtual bool mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mID);
+	virtual bool mouseReleased(const OIS::MouseEvent& me, OIS::MouseButtonID mID);
 
-	void UpdateSelection();
+	void selectEntity();
+	int selectedEntity = 0;
+	void physcis(float dt);
 
 	OIS::InputManager* mInputMgr;
 	OIS::Keyboard* mKeyboard;
@@ -52,6 +60,10 @@ public:
 	float dt;
 
 	Ogre::Vector3 dirVec;
+
+
+	OgreBites::SdkTrayManager*	mTrayMgr;
+	OgreBites::SdkCameraMan*    mCameraMan;
 };
 
 #endif /* INC_INPUTMGR_H_ */

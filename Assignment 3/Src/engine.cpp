@@ -32,30 +32,30 @@ void Engine::init(){
 	std::cout << "Constructed GfxMgr" << std::endl<< std::endl<< std::endl;
 	inputMgr = new InputMgr(this);
 	std::cout << "Constructed inputMgr" << std::endl<< std::endl<< std::endl;
-	//entityMgr = new EntityMgr(this);
-	//gameMgr = new GameMgr(this);
+	entityMgr = new EntityMgr(this);
+	gameMgr = new GameMgr(this);
 // initialize
 	gfxMgr->init();
 	std::cout << "init GfxMgr" << std::endl<< std::endl<< std::endl;
 	inputMgr->init();
 	std::cout << "init inputMgr" << std::endl<< std::endl<< std::endl;
-	//entityMgr->init();
-	//gameMgr->init();
+	entityMgr->init();
+	gameMgr->init();
 // load level to play
 	gfxMgr->loadLevel();
 	std::cout << "loaded level GfxMgr" << std::endl<< std::endl<< std::endl;
 	inputMgr->loadLevel();
 	std::cout << "loaded level inputMgr" << std::endl<< std::endl<< std::endl;
-	//entityMgr->loadLevel();
-	//gameMgr->loadLevel();
+	entityMgr->loadLevel();
+	gameMgr->loadLevel();
 }
 
 void Engine::tickAll(float dt){
 	gfxMgr->tick(dt);
 	//std::cout << "tick GfxMgr" << std::endl<< std::endl<< std::endl;
 	inputMgr->tick(dt);
-	//entityMgr->Tick(dt);
-	//gameMgr->tick(dt);
+	entityMgr->Tick(dt);
+	gameMgr->tick(dt);
 }
 
 void Engine::shutdown(){
@@ -63,8 +63,8 @@ void Engine::shutdown(){
 	std::cout << "stopped InputMgr" << std::endl<< std::endl<< std::endl;
 	gfxMgr->stop();
 	std::cout << "stopped gfxMgr" << std::endl<< std::endl<< std::endl;
-	//entityMgr->stop();
-	//gameMgr->stop();
+	entityMgr->stop();
+	gameMgr->stop();
 }
 void Engine::run(){
 	Ogre::Timer* timer = new Ogre::Timer();

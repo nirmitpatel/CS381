@@ -24,6 +24,9 @@
 #include <OgreException.h>
 #include <OgreMeshManager.h>
 #include <OgreWindowEventUtilities.h>
+#include <Types.h>
+#include <Entity381.h>
+#include <EntityMgr.h>
 
 class Engine;
 class GfxMgr : public Mgr, public Ogre::WindowEventListener, public Ogre::FrameListener{
@@ -41,7 +44,6 @@ public:
 	Ogre::String mResourcesCfg;
 	Ogre::String mPluginsCfg;
 	Ogre::RenderWindow* mWindow;
-	Ogre::SceneManager* mSceneMgr;
 	Ogre::Camera* mCamera;
 	Ogre::SceneManager* ogreSceneManager;
 	Ogre::SceneNode *CameraNode;

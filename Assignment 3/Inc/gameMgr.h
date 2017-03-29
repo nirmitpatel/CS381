@@ -12,6 +12,11 @@
 
 
 #include <mgr.h>
+#include <Types.h>
+#include <Entity381.h>
+#include <EntityMgr.h>
+
+class Engine;
 class GameMgr : Mgr{
 public:
 

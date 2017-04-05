@@ -64,7 +64,19 @@ Src/Entity381.d: ../Src/Entity381.cpp ../Src/../Inc/Entity381.h \
  /usr/local/include/OGRE/OgrePose.h \
  /usr/local/include/OGRE/OgreAnimationState.h \
  /usr/local/include/OGRE/OgreController.h ../Src/../Inc/../Inc/Types.h \
- ../Src/../Inc/Aspect.h ../Src/../Inc/../Inc/Entity381.h
+ ../Src/../Inc/Aspect.h ../Src/../Inc/../Inc/Entity381.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Command.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Entity381.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/inputMgr.h \
+ /usr/local/include/OGRE/OgreWindowEventUtilities.h \
+ /usr/include/OIS/OISEvents.h /usr/include/OIS/OISPrereqs.h \
+ /usr/include/OIS/OISConfig.h /usr/include/OIS/OISInputManager.h \
+ /usr/include/OIS/OISKeyboard.h /usr/include/OIS/OISObject.h \
+ /usr/include/OIS/OISInterface.h /usr/include/OIS/OISEvents.h \
+ /usr/include/OIS/OISMouse.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/../Inc/mgr.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Types.h ../Src/../Inc/UnitAI.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Aspect.h
 
 ../Src/../Inc/Entity381.h:
 
@@ -205,3 +217,37 @@ Src/Entity381.d: ../Src/Entity381.cpp ../Src/../Inc/Entity381.h \
 ../Src/../Inc/Aspect.h:
 
 ../Src/../Inc/../Inc/Entity381.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Command.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Entity381.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/inputMgr.h:
+
+/usr/local/include/OGRE/OgreWindowEventUtilities.h:
+
+/usr/include/OIS/OISEvents.h:
+
+/usr/include/OIS/OISPrereqs.h:
+
+/usr/include/OIS/OISConfig.h:
+
+/usr/include/OIS/OISInputManager.h:
+
+/usr/include/OIS/OISKeyboard.h:
+
+/usr/include/OIS/OISObject.h:
+
+/usr/include/OIS/OISInterface.h:
+
+/usr/include/OIS/OISEvents.h:
+
+/usr/include/OIS/OISMouse.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/../Inc/mgr.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Types.h:
+
+../Src/../Inc/UnitAI.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Aspect.h:

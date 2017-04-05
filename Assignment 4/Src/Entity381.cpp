@@ -8,6 +8,7 @@
 #include "../Inc/Entity381.h"
 
 #include "../Inc/Aspect.h"
+#include "../Inc/UnitAI.h"
 
 unsigned int Entity381::nextId = 0;
 
@@ -16,15 +17,20 @@ Entity381::Entity381(EntityType entType, Ogre::Vector3 pos, float heading){
 	this->pos = pos;
 	this->heading = heading;
 	this->vel = Ogre::Vector3::ZERO;
+	this->targetLocation = Ogre::Vector3::ZERO;
 	this->speed = 0;
 
 	this->isSelected = false;
 
+
 	this->aspects.clear();
 	Renderable *r = new Renderable(this);
 	Physics *p = new Physics(this);
-	this->aspects.push_front(r);
-	this->aspects.push_front(p);
+	UnitAI *a = new UnitAI(this);
+
+	this->aspects.push_back(r);
+	this->aspects.push_back(p);
+	this->aspects.push_back(a);
 
 	this->entityId = Entity381::nextId++;
 
@@ -50,15 +56,22 @@ void Entity381::DefaultInit(){
 }
 
 void Entity381::Tick(float dt){
-	for(std::list<Aspect*>::const_iterator ai = aspects.begin(); ai != aspects.end(); ++ai){
+	// Loop through list of aspects
+
+	for(int i = 0; i<aspects.size();i++)
+		aspects[i]->Tick(dt);
+
+	/*for(std::list<Aspect*>::const_iterator ai = aspects.begin(); ai != aspects.end(); ++ai){
 		(*ai)->Tick(dt);
-	}
+	}*/
+
 }
 
 Ddg::Ddg(Ogre::Vector3 pos, float heading) : Entity381(EntityType::DDG, pos, heading){
 	this->meshfile = "ddg51.mesh";
 	this->acceleration = 1.0f;
 	this->turnRate = 0.1f;
+
 }
 
 Ddg::~Ddg(){
@@ -69,6 +82,7 @@ Cigarette::Cigarette(Ogre::Vector3 pos, float heading) : Entity381(EntityType::C
 	this->meshfile = "cigarette.mesh";
 	this->acceleration = 1.5f;
 	this->turnRate = 0.3f;
+
 }
 
 Cigarette::~Cigarette(){
@@ -79,6 +93,7 @@ Alien::Alien(Ogre::Vector3 pos, float heading) : Entity381(EntityType::ALIEN, po
 	this->meshfile = "alienship.mesh";
 	this->turnRate = 0.5f;
 	this->acceleration = 1.8f;
+
 }
 
 Alien::~Alien(){
@@ -89,6 +104,7 @@ Cvn::Cvn(Ogre::Vector3 pos, float heading) : Entity381(EntityType::CVN, pos, hea
 	this->meshfile = "cvn68.mesh";
 	this->turnRate = 0.05f;
 	this->acceleration = 0.75f;
+
 }
 
 Cvn::~Cvn(){
@@ -99,6 +115,7 @@ Frigate::Frigate(Ogre::Vector3 pos, float heading) : Entity381(EntityType::FRIGA
 	this->meshfile = "sleek.mesh";
 	this->turnRate = 0.15f;
 	this->acceleration = 1.1f;
+
 }
 
 Frigate::~Frigate(){

@@ -9,6 +9,7 @@
 #define ASPECT_H_
 
 #include "../Inc/Entity381.h"
+#include <Command.h>
 
 class Aspect {
 
@@ -16,8 +17,10 @@ public:
 	Aspect(Entity381* ent);
 	virtual ~Aspect();
 
+	virtual void AddCommand(Command *c);
 	virtual void Tick(float dt) = 0;
 	Entity381 *entity;
+
 
 
 };

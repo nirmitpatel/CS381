@@ -1,0 +1,91 @@
+/*
+ * UnitAI.cpp
+ *
+ *  Created on: Apr 3, 2017
+ *      Author: jwoo
+ */
+#include <UnitAI.h>
+#include <engine.h>
+
+
+
+
+
+
+UnitAI::UnitAI(Entity381* ent) : Aspect(ent){
+
+}
+
+UnitAI::~UnitAI(){
+
+}
+
+void UnitAI::Tick(float dt){
+
+
+	Command *currentCommand = GetCommand(commands.front());
+
+	if(!currentCommand)
+		currentCommand->tick(dt);
+	else
+		return;
+
+
+	commands.pop();
+
+	/*for(unsigned int i = 0; i<commands.size(); i++)
+	{
+
+		commands.front()->tick(dt);
+	}*/
+}
+
+Command * UnitAI::GetCommand(Command *c){
+	//MoveTo(Entity381->ent, c->targetLocation);
+
+	Command *temp = new Command();
+
+	// if the command doesnt exist
+	if(!c)
+	{
+		return NULL;
+	}
+
+
+	/*switch(c->commandType)
+	{
+	case COMMAND_TYPE::moveTo:
+		break;
+	case COMMAND_TYPE::follow:
+		break;
+
+	}*/
+
+	return temp;
+}
+
+
+void UnitAI::AddCommand(Command *c){
+
+	std::cerr<<"Command added to the queue"<<std::endl;
+
+	commands.push(c);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

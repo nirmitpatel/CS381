@@ -143,7 +143,15 @@ Src/EntityMgr.d: ../Src/EntityMgr.cpp ../Src/../Inc/EntityMgr.h \
  /usr/local/include/OGRE/OgreConfigFile.h \
  /usr/local/include/OGRE/OgreRenderWindow.h \
  /usr/local/include/OGRE/OgreCamera.h \
- /usr/local/include/OGRE/OgreViewport.h ../Src/../Inc/../Inc/inputMgr.h
+ /usr/local/include/OGRE/OgreViewport.h ../Src/../Inc/../Inc/inputMgr.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Entity381.h \
+ ../Src/../Inc/../Inc/Command.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/inputMgr.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Types.h \
+ ../Src/../Inc/../Inc/UnitAI.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Aspect.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/../Inc/Entity381.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Command.h
 
 ../Src/../Inc/EntityMgr.h:
 
@@ -460,3 +468,19 @@ Src/EntityMgr.d: ../Src/EntityMgr.cpp ../Src/../Inc/EntityMgr.h \
 /usr/local/include/OGRE/OgreViewport.h:
 
 ../Src/../Inc/../Inc/inputMgr.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Entity381.h:
+
+../Src/../Inc/../Inc/Command.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/inputMgr.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Types.h:
+
+../Src/../Inc/../Inc/UnitAI.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Aspect.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/../Inc/Entity381.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Command.h:

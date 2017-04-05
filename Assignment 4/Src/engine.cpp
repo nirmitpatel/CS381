@@ -14,6 +14,7 @@ Engine::Engine(){
 	inputMgr = 0;
 	entityMgr = 0;
 	gameMgr = 0;
+	//moveTo = 0;
 	keepRunning = true;
 
 }
@@ -33,11 +34,15 @@ void Engine::init(){
 	inputMgr = new InputMgr(this);
 	entityMgr = new EntityMgr(this);
 	gameMgr = new GameMgr(this);
+	//command = new Command(this, );
+	//moveTo = new MoveTo(this->gameMgr->, this->inputMgr->point);
 // initialize
 	gfxMgr->init();
 	inputMgr->init();
 	entityMgr->init();
 	gameMgr->init();
+	//command->init();
+	//moveTo->init();
 // load level to play
 	gfxMgr->loadLevel();
 	inputMgr->loadLevel();
@@ -50,6 +55,8 @@ void Engine::tickAll(float dt){
 	inputMgr->tick(dt);
 	entityMgr->tick(dt);
 	gameMgr->tick(dt);
+	//command->tick(dt);
+	//moveTo->tick(dt);
 }
 
 void Engine::shutdown(){

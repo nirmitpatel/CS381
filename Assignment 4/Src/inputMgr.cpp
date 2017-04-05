@@ -6,13 +6,15 @@
  */
 
 #include "../Inc/inputMgr.h"
-
+#include "../Inc/Command.h"
 #include "../Inc/engine.h"
+#include "UnitAI.h"
 
 using namespace std;
 
-
 InputMgr::InputMgr(Engine *engine) : Mgr(engine){
+
+	// Keyboard
 	keyboardTimer = keyTime;
 	selectionTimer = selectionTime;
 
@@ -33,7 +35,7 @@ InputMgr::InputMgr(Engine *engine) : Mgr(engine){
 	pl.insert(std::make_pair(std::string("w32_mouse"), std::string("DISCL_FOREGROUND" )));
 	pl.insert(std::make_pair(std::string("w32_mouse"), std::string("DISCL_NONEXCLUSIVE")));
 	pl.insert(std::make_pair(std::string("w32_keyboard"), std::string("DISCL_FOREGROUND")));
-	pl.insert(std::make_pair(std::string("w32_keyboard"), std::string("DISCL_NONEXCLUSIVE")));
+	pl.insert(std::make_pair(std::string("ityw32_keyboard"), std::string("DISCL_NONEXCLUSIVE")));
 #elif defined OIS_LINUX_PLATFORM
 	pl.insert(std::make_pair(std::string("x11_mouse_grab"), std::string("false")));
 	pl.insert(std::make_pair(std::string("x11_mouse_hide"), std::string("false")));
@@ -47,33 +49,6 @@ InputMgr::InputMgr(Engine *engine) : Mgr(engine){
 
 	keyboard->setEventCallback(this);
 	mouse->setEventCallback(this);
-
-
-    /*mInputContext.mKeyboard = keyboard;
-    mInputContext.mMouse = mouse;
-    mTrayMgr = new OgreBites::SdkTrayManager("InterfaceName", engine->gfxMgr->ogreRenderWindow, mInputContext, this);
-    mTrayMgr->showFrameStats(OgreBites::TL_BOTTOMLEFT);
-    mTrayMgr->showLogo(OgreBites::TL_BOTTOMRIGHT);
-    mTrayMgr->hideCursor();
-
-    // Create a params panel for displaying sample details
-    Ogre::StringVector items;
-    items.push_back("cam.pX");
-    items.push_back("cam.pY");
-    items.push_back("cam.pZ");
-    items.push_back("");
-    items.push_back("cam.oW");
-    items.push_back("cam.oX");
-    items.push_back("cam.oY");
-    items.push_back("cam.oZ");
-    items.push_back("");
-    items.push_back("Filtering");
-    items.push_back("Poly Mode");
-
-    mDetailsPanel = mTrayMgr->createParamsPanel(OgreBites::TL_NONE, "DetailsPanel", 200, items);
-    mDetailsPanel->setParamValue(9, "Bilinear");
-    mDetailsPanel->setParamValue(10, "Solid");
-    mDetailsPanel->hide();*/
 
 	windowResized(engine->gfxMgr->ogreRenderWindow);
 	Ogre::WindowEventUtilities::addWindowEventListener(engine->gfxMgr->ogreRenderWindow, this);
@@ -132,16 +107,14 @@ void InputMgr::windowClosed(Ogre::RenderWindow* rw){
 }
 
 bool InputMgr::keyPressed(const OIS::KeyEvent &arg) {
-	std::cout << "Key Pressed: " << arg.key << std::endl;
-	mCameraMan->injectKeyDown(arg);
+	//std::cout << "Key Pressed: " << arg.key << std::endl;
 	return true;
 }
 bool InputMgr::keyReleased(const OIS::KeyEvent &arg){
-	std::cout << "Checking key release" << std::endl;
+	//std::cout << "Checking key release" << std::endl;
 	if (arg.key == OIS::KC_TAB){
 		engine->entityMgr->SelectNextEntity();
 	}
-	mCameraMan->injectKeyUp(arg);
 	return true;
 }
 
@@ -149,11 +122,12 @@ bool InputMgr::keyReleased(const OIS::KeyEvent &arg){
 
 
 bool InputMgr::mouseMoved(const OIS::MouseEvent &arg){
-    /*if (mTrayMgr->injectMouseMove(arg)) return true;
-    mCameraMan->injectMouseMove(arg);
-    return true;*/
+    return true;
 }
 bool InputMgr::mousePressed(const OIS::MouseEvent &arg, OIS::MouseButtonID id) {
+
+
+	//engine->entityMgr->selectedEntity->aspects[2]->AddCommand(command);
 
 
 	if (mouse->getMouseState().buttonDown (OIS::MB_Left)){
@@ -184,15 +158,85 @@ bool InputMgr::mousePressed(const OIS::MouseEvent &arg, OIS::MouseButtonID id) {
 			// along the ray, supplying it with a distance value
 			// get the point where the intersection is
 
-		Ogre::Vector3 point = mouseRay.getPoint(result.second);
-		cout << point << endl;
+		point = mouseRay.getPoint(result.second);
+		cerr << "Left mouse click: "<<point << endl;
+
+
+		closestBoat = engine->entityMgr->closestBoat(point);
+		Ogre::Real temp = closestBoat->pos.distance(point);
+
+		if( temp <= 100 ){
+			engine->entityMgr->selectedEntity->isSelected = false;
+			engine->entityMgr->selectedEntity = closestBoat;
+			engine->entityMgr->selectedEntity->isSelected = true;
+			}
 		}
 	}
+
+
+
+
+
+	if (mouse->getMouseState().buttonDown (OIS::MB_Right)){
+		// get window height and width
+		Ogre::Real screenWidth = Ogre::Root::getSingleton().getAutoCreatedWindow()->getWidth();
+		Ogre::Real screenHeight = Ogre::Root::getSingleton().getAutoCreatedWindow()->getHeight();
+
+		OIS::MouseState arg = mouse->getMouseState();
+
+		// Convert to 0-1 offset
+		Ogre::Real offsetX = arg.X.abs / screenWidth;
+		Ogre::Real offsetY = arg.Y.abs / screenHeight;
+
+		//set up the ray
+		Ogre::Ray mouseRay = engine->gfxMgr->ogreCamera->getCameraToViewportRay(offsetX, offsetY);
+
+		// check if the ray intersects out plane
+		// intersects will return whether it intersects or not (return bool value) and
+		// what distance ( the real value) along the ray the intersection is
+		std::pair<bool, float> result = mouseRay.intersects(engine->gameMgr->mPlane);
+		if(result.first)
+		{
+			//if the ray intersects the plane, we have a distance value
+			// telling us how far from the ray origin the intersection occurred
+			// the last thing we need is the point of the intersection
+			// Ray provides us getPoint() function which returns the point
+			// along the ray, supplying it with a distance value
+			// get the point where the intersection is
+			point = mouseRay.getPoint(result.second);
+			cerr << "Right mouse click: "<<point << endl;
+			engine->entityMgr->selectedEntity->targetLocation = point;
+			//move->targetLocation = point;
+		}
+
+		// Get our closest boat position
+		closestBoat = engine->entityMgr->closestBoat(point);
+		Ogre::Real temp = closestBoat->pos.distance(point);
+
+		// if our target destination is within range of desired boat
+		if( temp <= 100 ) // follow
+		{
+			// assign entity to follow
+			engine->entityMgr->selectedEntity->targetLocation = closestBoat->pos;
+			Follow *follow = new Follow(engine->entityMgr->selectedEntity, closestBoat);
+
+			engine->entityMgr->selectedEntity->aspects[2]->AddCommand(follow);
+			//engine->entityMgr->selectedEntity->aspects.push_back(a);
+		}
+		else // move to location
+		{
+			MoveTo* move = new MoveTo (engine->entityMgr->selectedEntity, point);
+			//UnitAI *a = new UnitAI(engine->entityMgr->selectedEntity);
+			engine->entityMgr->selectedEntity->aspects[2]->AddCommand(move);
+			//engine->entityMgr->selectedEntity->aspects.push_back(a);
+		}
+	}
+
+	return true;
 }
+
 bool InputMgr::mouseReleased(const OIS::MouseEvent &arg, OIS::MouseButtonID id){
-    /*if (mTrayMgr->injectMouseUp(arg, id)) return true;
-    mCameraMan->injectMouseUp(arg, id);
-    return true;*/
+    return true;
 }
 
 // Game specific input handling
@@ -321,7 +365,9 @@ void InputMgr::UpdateDesiredSpeedHeading(float dt){
 
 		if((keyboardTimer < 0) && keyboard->isKeyDown(OIS::KC_NUMPAD4)){
 			keyboardTimer = keyTime;
+			//std::cout << std::endl << engine->entityMgr->selectedEntity->heading << std::endl << std::endl;
 			engine->entityMgr->selectedEntity->desiredHeading -= 0.3f;
+			cout << endl << engine->entityMgr->selectedEntity->desiredHeading << endl << endl;
 		}
 		if((keyboardTimer < 0) && keyboard->isKeyDown(OIS::KC_NUMPAD6)){
 			keyboardTimer = keyTime;
@@ -342,65 +388,4 @@ void InputMgr::UpdateSelection(float dt){
 
 
 
-
-
-
-
-
-/*if ((toggleTimer < 0) && mMouse->getMouseState().buttonDown (OIS::MB_Right)){
- *
- * 		toggleTimer = 0.5;
- *
- * 		// get window height and width
- * 		Ogre::Real screenWidth = Ogre::Root::getSingleton().getAutoCreatedWindow()->getWidth();
- * 		Ogre::Real screenHeight = Ogre::Root::getSingleton().getAutoCreatedWindow()->getHeight();
- *
- * 		OIS::MouseState arg = mMouse->getMouseState();
- *
- * 		// Convert to 0-1 offset
- * 		Ogre::Real offsetX = arg.X.abs / screenWidth;
- * 		Ogre::Real offsetY = arg.Y.abs / screenHeight;
- *
- * 		//set up the ray
- * 		Ogre::Ray mouseRay = mCamera->getCameraToViewportRay(offsetX, offsetY);
- *
- * 		// check if the ray intersects out plane
- * 		// intersects will return whether it intersects or not (return bool value) and
- * 		// what distance ( the real value) along the ray the intersection is
- * 		std::pair<bool, float> result = mouseRay.intersects(mPlane);
- * 		if(result.first)
- * 		{
- * 			//if the ray intersects the plane, we have a distance value
- * 			// telling us how far from the ray origin the intersection occurred
- * 			// the last thing we need is the point of the intersection
- * 			// Ray provides us getPoint() function which returns the point
- * 			// along the ray, supplying it with a distance value
- * 			// get the point where the intersection is
- *
- * 		Ogre::Vector3 point = mouseRay.getPoint(result.second);
- * 		cout << point << endl;
- * 		}
- * 	}
- *
- *
- *
- *
- *
- *
- *
- *
- * }
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- */
 

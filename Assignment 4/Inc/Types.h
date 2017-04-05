@@ -17,5 +17,10 @@ enum class EntityType {
 	ALIEN
 };
 
+enum class COMMAND_TYPE {
+	moveTo,
+	follow
+};
+
 
 #endif /* TYPES_H_ */

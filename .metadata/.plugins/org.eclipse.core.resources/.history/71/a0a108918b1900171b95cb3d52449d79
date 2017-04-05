@@ -1,0 +1,64 @@
+/*
+ * UnitAI.cpp
+ *
+ *  Created on: Apr 3, 2017
+ *      Author: jwoo
+ */
+#include <UnitAI.h>
+#include <engine.h>
+#include <Types.h>
+
+
+
+
+
+UnitAI::UnitAI(Entity381* ent) : Aspect(ent){
+
+}
+
+UnitAI::~UnitAI(){
+
+}
+
+void UnitAI::Tick(float dt){
+
+	for(unsigned int i = 0; i<commands.size(); i++)
+		commands[i]->tick(dt);
+
+}
+
+void UnitAI::SetCommand(Command *c){
+	//MoveTo(Entity381->ent, c->targetLocation);
+
+	switch(c->commandType)
+	{
+	case moveTo:
+
+	case follow:
+	}
+
+}
+
+
+void UnitAI::AddCommand(Command *c){
+
+	commands.push_back(c);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

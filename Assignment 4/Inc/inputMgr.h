@@ -15,11 +15,15 @@
 #include <OISMouse.h>
 
 #include "../Inc/mgr.h"
+#include <Entity381.h>
+#include <OgreVector3.h>
 
 
 
 #  include <OGRE/SdkTrays.h>
 #  include <OGRE/SdkCameraMan.h>
+
+//class MoveTo;
 
 class InputMgr : public Mgr, public OIS::KeyListener, public OIS::MouseListener, public Ogre::WindowEventListener, OgreBites::SdkTrayListener
 {
@@ -44,6 +48,7 @@ protected:
 
 public:
 
+    float dt = 0;
 	InputMgr(Engine *engine);
 	~InputMgr();
 	virtual void init();
@@ -56,14 +61,15 @@ public:
     OIS::Mouse*        mouse;
     OIS::Keyboard*     keyboard;
 
-
-
     OgreBites::SdkTrayManager*	mTrayMgr;
     OgreBites::SdkCameraMan*    mCameraMan;
     OgreBites::InputContext     mInputContext;
     OgreBites::ParamsPanel*     mDetailsPanel;   	// Sample details panel
     bool                        mCursorWasVisible;	// Was cursor visible before dialog appeared?
     bool                        mShutDown;
+
+    Entity381* closestBoat;
+    Ogre::Vector3 point;
 };
 
 

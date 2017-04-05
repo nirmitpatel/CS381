@@ -12,6 +12,8 @@
 #include "../Inc/gameMgr.h"
 #include "../Inc/GfxMgr.h"
 #include "../Inc/inputMgr.h"
+#include "../Inc/Command.h"
+#include "../Inc/UnitAI.h"
 
 class Engine {
 private:
@@ -24,6 +26,9 @@ public:
 	GfxMgr*         gfxMgr;
 	InputMgr*       inputMgr;
 	GameMgr*        gameMgr;
+	//Command*		command;
+	//MoveTo*			moveTo;
+	//UnitAI*			AI;
 	//SelectionMgr* selectionMgr;
 	//ControlMgr*   controlMgr;
 

@@ -145,7 +145,15 @@ Src/as3.d: ../Src/as3.cpp ../Src/../Inc/as3.h \
  /usr/local/include/OGRE/OgreRenderWindow.h \
  /usr/local/include/OGRE/OgreCamera.h \
  /usr/local/include/OGRE/OgreViewport.h \
- ../Src/../Inc/../Inc/../Inc/inputMgr.h ../Src/../Inc/Utils.h
+ ../Src/../Inc/../Inc/../Inc/inputMgr.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Entity381.h \
+ ../Src/../Inc/../Inc/../Inc/Command.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/inputMgr.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Types.h \
+ ../Src/../Inc/../Inc/../Inc/UnitAI.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Aspect.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/../Inc/Entity381.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Command.h ../Src/../Inc/Utils.h
 
 ../Src/../Inc/as3.h:
 
@@ -460,5 +468,21 @@ Src/as3.d: ../Src/as3.cpp ../Src/../Inc/as3.h \
 /usr/local/include/OGRE/OgreViewport.h:
 
 ../Src/../Inc/../Inc/../Inc/inputMgr.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Entity381.h:
+
+../Src/../Inc/../Inc/../Inc/Command.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/inputMgr.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Types.h:
+
+../Src/../Inc/../Inc/../Inc/UnitAI.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Aspect.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/../Inc/Entity381.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Command.h:
 
 ../Src/../Inc/Utils.h:

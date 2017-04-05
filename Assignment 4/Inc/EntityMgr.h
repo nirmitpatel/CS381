@@ -17,6 +17,7 @@
 
 #include "../Inc/Entity381.h"
 #include "../Inc/mgr.h"
+#include <OgreVector3.h>
 
 class Engine;
 
@@ -43,6 +44,10 @@ public:
 	void CreateOgreEntityAndNode(Entity381 *ent);
 	//void Tick(float dt);
 	void SelectNextEntity();
+
+
+
+	Entity381* closestBoat(Ogre::Vector3 point);
 
 
 };

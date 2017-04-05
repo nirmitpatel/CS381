@@ -143,7 +143,15 @@ Src/GfxMgr.d: ../Src/GfxMgr.cpp ../Src/../Inc/GfxMgr.h \
  /usr/include/OIS/OISMouse.h /usr/local/include/OGRE/OgreMeshManager.h \
  /usr/local/include/OGRE/OgrePatchMesh.h \
  /usr/local/include/OGRE/OgrePatchSurface.h ../Src/../Inc/../Inc/GfxMgr.h \
- ../Src/../Inc/../Inc/inputMgr.h
+ ../Src/../Inc/../Inc/inputMgr.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Entity381.h \
+ ../Src/../Inc/../Inc/Command.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/inputMgr.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Types.h \
+ ../Src/../Inc/../Inc/UnitAI.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Aspect.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/../Inc/Entity381.h \
+ /home/jwoo/workspace/Assignment\ 4/Inc/Command.h
 
 ../Src/../Inc/GfxMgr.h:
 
@@ -460,3 +468,19 @@ Src/GfxMgr.d: ../Src/GfxMgr.cpp ../Src/../Inc/GfxMgr.h \
 ../Src/../Inc/../Inc/GfxMgr.h:
 
 ../Src/../Inc/../Inc/inputMgr.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Entity381.h:
+
+../Src/../Inc/../Inc/Command.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/inputMgr.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Types.h:
+
+../Src/../Inc/../Inc/UnitAI.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Aspect.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/../Inc/Entity381.h:
+
+/home/jwoo/workspace/Assignment\ 4/Inc/Command.h:

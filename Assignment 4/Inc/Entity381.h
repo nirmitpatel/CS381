@@ -11,7 +11,7 @@
 #include <OgreVector3.h>
 #include <OgreSceneNode.h>
 
-#include <list>
+#include <vector>
 #include "../Inc/Types.h"
 
 class Aspect;
@@ -41,19 +41,22 @@ public:
 	//Ogre stuff
 	Ogre::Vector3 pos;
 	Ogre::Vector3 vel;
+	Ogre::Vector3 targetLocation;
 	Ogre::SceneNode *ogreSceneNode;
 	Ogre::Entity* ogreEntity;
+
 
 	//Engine stuff dynamic
 	float speed, heading;
 	float desiredSpeed, desiredHeading;
+	int radius;// for selection
 
 	//selection
 	bool isSelected;
 
 	unsigned int entityId;
 
-	std::list<Aspect*> aspects;
+	std::vector<Aspect*> aspects;
 };
 
 class Ddg: public Entity381 {
